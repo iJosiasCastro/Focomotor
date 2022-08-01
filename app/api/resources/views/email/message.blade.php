@@ -301,7 +301,7 @@
                                                                         target="_blank" href="https://focomotor.com.ar"
                                                                         style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px"><img
                                                                             class="adapt-img"
-                                                                            src="https://focomotor.com.ar/wp-content/uploads/2021/03/focomotor-blanco.png"
+                                                                            src="https://focomotor.com.ar/img/logo/focomotor-blanco.png"
                                                                             alt
                                                                             style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
                                                                             width="164"></a></td>
