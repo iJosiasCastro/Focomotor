@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Focomotor</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.min.css">
+        <link href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" rel="stylesheet" type="text/css">
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.6.0/dist/tailwind.min.css">
+    </head>
+    <body>
+        <img/>
+        <nav class="bg-white py-2 shadow md:py-4" data-pgc="Header">
+            <div class="flex justify-between max-w-screen-xl mx-auto px-4">
+                <div class="flex items-center">
+                    <img src="https://focomotor.com.ar/wp-content/uploads/2021/03/focomotor-primario-1024x149.png" width="160px">
+                </div>
+                <div class="hidden bg-white border border-gray-400 flex items-center justify-center rounded-lg w-4/12">
+                    <input type="text" class="focus:outline-none h-full placeholder-gray-600 px-4 py-3 rounded-lg w-full" placeholder="Buscar...">
+                    <button class="border-gray-500 border-l flex focus:outline-none h-6 items-center justify-center px-4 text-primary">
+                        <i class="fa-search fas"></i>
+                    </button>
+                </div>
+                <form class="w-4/12"> 
+                    <div class="flex">
+                        <div class="relative w-full">
+                            <input type="search" class="py-2.5 bg-gray-50 block border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:border-blue-500 focus:ring-blue-500 px-4 rounded-lg text-gray-900 text-sm w-full dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Buscar vehículos..." required>
+                            <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="flex-row hidden text-lg lg:flex" id="navbar-collapse">
+                    <a href="#" class="duration-300 hover:text-gray-700 p-2 rounded text-gray-800 transition-colors md:mx-2 lg:px-4">Listado</a>
+                    <a href="#" class="duration-300 hover:text-gray-800 p-2 rounded text-gray-800 transition-colors md:mx-2 lg:px-4">Publicá</a>
+                    <a href="#" class="bg-primary duration-500 hover:opacity-75 my-1 opacity-100 px-3 py-1 rounded-lg text-white transition-opacity md:mx-2 lg:px-4">Ingresar</a>
+                </div>
+                <button class="hover:opacity-75 opacity-100 text-3xl text-primary lg:hidden" id="navbar-toggle">
+                    <i class="fa-user-circle fas h-8"></i>
+                </button>
+            </div>
+        </nav>
+        <main>
+            <div style="background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('./img/headers/Slide-11.jpg')" class="bg-black bg-center bg-cover flex h-32 md:h-48 items-center justify-center text-3xl text-white">
+                <h1>Ingresar</h1>
+            </div>
+            <div class="max-w-xl mx-auto">
+                <div class="h-10 lg:h-16"></div>
+                <div class="border-primary border-t-8 rounded-t-lg">
+                    <div class="bg-gray-100 border-b border-gray-400 border-l border-r border-solid py-5 rounded-b-lg shadow-lg text-center text-xl">
+                        <h3>¡Hola! Para publicar primero debes ingresar </h3>
+                    </div>
+                </div>
+                <div class="h-10 lg:h-16"></div>
+                <div class="text-xl bg-gray-100 border border-gray-400 border-solid p-3 rounded-lg shadow-lg text-center py-6">
+                    <div class="flex justify-center">
+                        <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 rounded-lg text-white transition-opacity flex"> <div class="bg-gray-100 border-2 border-primary flex rounded-lg text-blue-600">
+                                <img class="h-6 my-auto mx-2" src="img/partials/google-logo.png"/>
+                            </div> <div class="px-4 py-2">
+                                Ingresar con 
+                                <span class="font-bold">Google</span>
+                            </div></a>
+                    </div>
+                    <div class="h-8"></div>
+                    <form>
+                        <div class="max-w-sm mb-8 mx-auto text-left">
+                            <label for="email" class="block mb-1 text-gray-900">Email</label>
+                            <input type="email" id="email" class="bg-gray-50 block border border-gray-400 focus:border-blue-500 focus:ring-blue-500 p-2.5 placeholder-gray-600 rounded-lg text-gray-900 text-lg w-full" placeholder="Ingresá tu email" required>
+                        </div>
+                        <div class="max-w-sm mb-8 mx-auto text-left">
+                            <label for="password" class="block mb-1 text-gray-900">Constraseña</label>
+                            <input type="email" id="email" class="bg-gray-50 block border border-gray-400 focus:border-blue-500 focus:ring-blue-500 p-2.5 placeholder-gray-600 rounded-lg text-gray-900 text-sm w-full" placeholder="Ingresá tu contraseña" required>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded text-white transition-opacity">Ingresar</a> 
+                        </div>
+                        <div class="h-8"></div>
+                        <a class="text-gray-600 text-sm" href="checkbox-1">¿Perdiste tu contraseña?</a>
+                    </form>
+                </div>
+                <div class="h-10 lg:h-16"></div>
+            </div>
+        </main>
+        <footer data-pgc="Footer">
+            <div class="h-24">
+</div>
+            <div class="bg-gray-900 hidden py-2 shadow md:py-4 lg:block">
+                <div class="flex justify-between max-w-screen-xl mx-auto px-4">
+                    <div class="flex items-center">
+                        <img src="https://focomotor.com.ar/wp-content/uploads/2021/03/focomotor-blanco-300x44.png" width="160px">
+                    </div>
+                    <div class="flex-row hidden text-base text-white lg:flex" id="navbar-collapse">
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">
+Política de Privacidad</a>
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">Terminos y Condiciones</a>
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">
+Contacto</a>
+                        <img class="h-10" src="https://focomotor.com.ar/wp-content/uploads/2021/03/appstore-300x87.png">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border bottom-0 fixed flex justify-around pb-1 pt-2 shadow-inner text-sm w-full z-20 lg:hidden">
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-home fas text-2xl h-6 mx-auto"></i> <span>Inicio</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-car-alt fas text-2xl text-2xl h-6 mx-auto"></i> <span>Listado</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="h-6 fa-wpforms fab text-2xl mx-auto"></i><span>Publicar</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-info-circle fas h-6 mx-auto text-2xl"></i> <span>Info.</span> </a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>
+    </body>
+</html>

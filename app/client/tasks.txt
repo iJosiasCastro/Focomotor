@@ -1,0 +1,2 @@
+User 363: {role: 4, password: SDed1843, email: 'sandoval.jonatan@hotmail.com'}
+User 1: {role: 3, password: 6763fbiS} 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Focomotor</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.6.0/dist/tailwind.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.min.css">
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+        <link href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav class="bg-white py-2 shadow md:py-4" data-pgc-define="Header" data-pgc-define-name="Header">
+            <div class="flex justify-between max-w-screen-xl mx-auto px-4">
+                <div class="flex items-center">
+                    <img src="https://focomotor.com.ar/wp-content/uploads/2021/03/focomotor-primario-1024x149.png" width="160px">
+                </div>
+                <div class="hidden bg-white border border-gray-400 flex items-center justify-center rounded-lg w-4/12">
+                    <input type="text" class="focus:outline-none h-full placeholder-gray-600 px-4 py-3 rounded-lg w-full" placeholder="Buscar...">
+                    <button class="border-gray-500 border-l flex focus:outline-none h-6 items-center justify-center px-4 text-primary">
+                        <i class="fa-search fas"></i>
+                    </button>
+                </div>
+                <form class="w-4/12"> 
+                    <div class="flex">
+                        <div class="relative w-full">
+                            <input type="search" class="py-2.5 bg-gray-50 block border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:border-blue-500 focus:ring-blue-500 px-4 rounded-lg text-gray-900 text-sm w-full dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Buscar vehículos..." required>
+                            <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="flex-row hidden text-lg lg:flex" id="navbar-collapse">
+                    <a href="#" class="duration-300 hover:text-gray-700 p-2 rounded text-gray-800 transition-colors md:mx-2 lg:px-4">Listado</a>
+                    <a href="#" class="duration-300 hover:text-gray-800 p-2 rounded text-gray-800 transition-colors md:mx-2 lg:px-4">Publicá</a>
+                    <a href="#" class="bg-primary duration-500 hover:opacity-75 my-1 opacity-100 px-3 py-1 rounded-lg text-white transition-opacity md:mx-2 lg:px-4">Ingresar</a>
+                </div>
+                <button class="hover:opacity-75 opacity-100 text-3xl text-primary lg:hidden" id="navbar-toggle">
+                    <i class="fa-user-circle fas h-8"></i>
+                </button>
+            </div>
+        </nav>
+        <main>
+            <section class="bg-auto bg-center flex flex-wrap items-center justify-center py-20 md:bg-cover" style="background-image: url('img/headers/header-home.jpg');">
+                <div style="background-image:url('/img/headers/header-home.jpg')" class="max-w-3xl px-2 w-full flex flex-wrap justify-center">
+                    <div class="font-semibold text-3xl text-shadow text-white text-center">
+                        <h1 class="font-sans">¿Qué estás buscando?</h1>
+                    </div>
+                    <div class="bg-gray-100 bg-opacity-75 max-w-2xl mt-3 py-4 rounded-lg text-xl w-full">
+                        <div class="grid grid-cols-1 justify-center px-1 w-full md:grid-cols-3 md:px-4">
+                            <select class="border-gray-200 cursor-pointer focus:outline-none m-2 p-2 rounded-lg text-gray-700">
+                                <option>Categorias</option>
+                                <option>Autos y camionetas</option>
+                                <option>Motos</option>
+                            </select>
+                            <select class="border-gray-200 cursor-pointer focus:outline-none m-2 p-2 rounded-lg text-gray-700">
+                                <option>Categorias</option>
+                                <option>Autos y camionetas</option>
+                                <option>Motos</option>
+                            </select>
+                            <select class="border-gray-200 cursor-pointer focus:outline-none m-2 p-2 rounded-lg text-gray-700">
+                                <option>Categorias</option>
+                                <option>Autos y camionetas</option>
+                                <option>Motos</option>
+                            </select>
+                        </div>
+                        <div class="h-2"></div>
+                        <div class="flex justify-center text-lg">
+                            <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded text-white transition-opacity">Buscar</a> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div>
+                <div class="h-10 lg:h-16"></div>
+                <section class="max-w-3xl mx-auto px-2">
+                    <h1 class="font-normal text-2xl">Ultimas publicaciones</h1>
+                    <div class="gap-2 grid grid-cols-2 mt-3 md:gap-4 md:grid-cols-3">
+                        <a hreF="" class="border border-gray-400 duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc-define="vehicleCard" data-pgc-define-name="vehicleCard"> <img class="w-full" src="https://focomotor.com.ar/wp-content/uploads/elementor/thumbs/IMG-20220505-WA0055-pokykd91au754pe09h33wu8rulbwskdt9b91iuvbl0.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-4 text-gray-900">
+                                <div class="leading-tight mb-2 text-base md:text-lg">Volkswagen Amarok Highline Automatica 4×4 2018</div>
+                                <span class="font-semibold text-lg md:text-xl">$7.000.000</span>
+                                <div class="font-semibold flex text-gray-700 text-xs md:text-sm">
+                                    <i class="fas fa-map-marker-alt h-4 mr-1 my-auto"></i> 
+                                    <span>Necochea</span>
+                                </div>
+                            </div></a>
+                        <a hreF="" class="border border-gray-400 duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="vehicleCard"> <img class="w-full" src="https://focomotor.com.ar/wp-content/uploads/elementor/thumbs/IMG-20220505-WA0055-pokykd91au754pe09h33wu8rulbwskdt9b91iuvbl0.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-4 text-gray-900">
+                                <div class="leading-tight mb-2 text-base md:text-lg">Volkswagen Amarok Highline Automatica 4×4 2018</div>
+                                <span class="font-semibold text-lg md:text-xl">$7.000.000</span>
+                                <div class="font-semibold flex text-gray-700 text-xs md:text-sm">
+                                    <i class="fas fa-map-marker-alt h-4 mr-1 my-auto"></i> 
+                                    <span>Necochea</span>
+                                </div>
+                            </div></a>
+                        <a hreF="" class="border border-gray-400 duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="vehicleCard"> <img class="w-full" src="https://focomotor.com.ar/wp-content/uploads/elementor/thumbs/IMG-20220505-WA0055-pokykd91au754pe09h33wu8rulbwskdt9b91iuvbl0.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-4 text-gray-900">
+                                <div class="leading-tight mb-2 text-base md:text-lg">Volkswagen Amarok Highline Automatica 4×4 2018</div>
+                                <span class="font-semibold text-lg md:text-xl">$7.000.000</span>
+                                <div class="font-semibold flex text-gray-700 text-xs md:text-sm">
+                                    <i class="fas fa-map-marker-alt h-4 mr-1 my-auto"></i> 
+                                    <span>Necochea</span>
+                                </div>
+                            </div></a>
+                        <a hreF="" class="border border-gray-400 duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="vehicleCard"> <img class="w-full" src="https://focomotor.com.ar/wp-content/uploads/elementor/thumbs/IMG-20220505-WA0055-pokykd91au754pe09h33wu8rulbwskdt9b91iuvbl0.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-4 text-gray-900">
+                                <div class="leading-tight mb-2 text-base md:text-lg">Volkswagen Amarok Highline Automatica 4×4 2018</div>
+                                <span class="font-semibold text-lg md:text-xl">$7.000.000</span>
+                                <div class="font-semibold flex text-gray-700 text-xs md:text-sm">
+                                    <i class="fas fa-map-marker-alt h-4 mr-1 my-auto"></i> 
+                                    <span>Necochea</span>
+                                </div>
+                            </div></a>
+                    </div>
+                    <div class="flex justify-center mt-5">
+                        <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded text-white transition-opacity">Ver todos los vehículos</a> 
+                    </div>
+                </section>
+                <div class="h-10 lg:h-16"></div>
+                <section class="bg-gray-200 py-8 text-center">
+                    <div>
+                        <div class="flex flex-col items-center justify-center">
+                            <h1 class="font-normal text-2xl">
+            ¿Sos particular? </h1>
+                            <div class="mt-3">
+                                <img src="https://focomotor.com.ar/wp-content/uploads/2021/04/particular-300x154.png">
+                            </div>
+                            <p class="font-normal max-w-xs text-xl">Publicar en Focomotor es <b>gratis</b>, <b>rápido </b>y <b>simple</b>.</p>
+                            <span>(Hasta 3 vehiculos a la vez)</span>
+                            <div class="mt-6">
+                                <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded-lg text-white transition-opacity">Publicar</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex py-12 items-center ">
+                        <div class="border-b border-gray-400 flex-grow max-w-4xl mx-auto"></div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <h1 class="font-normal text-2xl"><h1 class="font-normal text-2xl">
+            ¿Sos agencia o concesionaria?</h1></h1>
+                        <div class="mt-3">
+                            <img src="https://focomotor.com.ar/wp-content/uploads/2021/04/concesionaria-768x207.png">
+                        </div>
+                        <p class="font-normal max-w-xs text-xl">¡En Focomotor podés publicar <b>todos tus vehiculos</b>!</p>
+                        <div class="mt-6">
+                            <a href="#" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded-lg text-white transition-opacity">Ver planes</a> 
+                        </div>
+                    </div>
+                </section>
+                <div class="h-10 lg:h-16"></div>
+                <div>
+                    <div class="max-w-xl mx-auto">
+                        <img src="https://focomotor.com.ar/wp-content/uploads/2021/05/Singla-Electricidad-02.png">
+                    </div>
+                </div>
+                <div class="h-10 lg:h-16"></div>
+                <section class="max-w-3xl mx-auto px-2">
+                    <h1 class="font-normal text-2xl">Marcas más buscadas</h1>
+                    <div class="gap-2 grid grid-cols-2 mt-3 md:gap-4 md:grid-cols-3">
+                        <a hreF="" class="border duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc-define="brandCard" data-pgc-define-name="brandCard"> <img class="h-40 w-full" src="https://focomotor.com.ar/wp-content/uploads/2021/04/toyota-1-300x200.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-5 text-center text-gray-900">
+                                <div class="flex justify-center">
+                                    <img src="img/marcas/1%20toyota.svg" class="-mt-16 bg-gray-100 h-20 object-cover rounded-full shadow w-20"/>
+                                </div>                                 
+                                <span class="text-xl md:text-2xl">Toyota</span>
+                            </div></a>
+                        <a hreF="" class="border duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="brandCard"> <img class="h-40 w-full" src="https://focomotor.com.ar/wp-content/uploads/2021/04/toyota-1-300x200.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-5 text-center text-gray-900">
+                                <div class="flex justify-center">
+                                    <img src="img/marcas/1%20toyota.svg" class="-mt-16 bg-gray-100 h-20 object-cover rounded-full shadow w-20"/>
+                                </div>                                 
+                                <span class="text-xl md:text-2xl">Toyota</span>
+                            </div></a>
+                        <a hreF="" class="border duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="brandCard"> <img class="h-40 w-full" src="https://focomotor.com.ar/wp-content/uploads/2021/04/toyota-1-300x200.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-5 text-center text-gray-900">
+                                <div class="flex justify-center">
+                                    <img src="img/marcas/1%20toyota.svg" class="-mt-16 bg-gray-100 h-20 object-cover rounded-full shadow w-20"/>
+                                </div>                                 
+                                <span class="text-xl md:text-2xl">Toyota</span>
+                            </div></a>
+                        <a hreF="" class="border duration-200 hover:-translate-y-1 hover:shadow-xl max-w-sm overflow-hidden rounded-lg shadow transform transition-all" data-pgc="brandCard"> <img class="h-40 w-full" src="https://focomotor.com.ar/wp-content/uploads/2021/04/toyota-1-300x200.jpg" alt="Sunset in the mountains"> <div class="bg-gray-100 px-3 py-5 text-center text-gray-900">
+                                <div class="flex justify-center">
+                                    <img src="img/marcas/1%20toyota.svg" class="-mt-16 bg-gray-100 h-20 object-cover rounded-full shadow w-20"/>
+                                </div>                                 
+                                <span class="text-xl md:text-2xl">Toyota</span>
+                            </div></a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer data-pgc-define="Footer" data-pgc-define-name="Footer">
+            <div class="h-24">
+</div>
+            <div class="bg-gray-900 hidden py-2 shadow md:py-4 lg:block">
+                <div class="flex justify-between max-w-screen-xl mx-auto px-4">
+                    <div class="flex items-center">
+                        <img src="https://focomotor.com.ar/wp-content/uploads/2021/03/focomotor-blanco-300x44.png" width="160px">
+                    </div>
+                    <div class="flex-row hidden text-base text-white lg:flex" id="navbar-collapse">
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">
+Política de Privacidad</a>
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">Terminos y Condiciones</a>
+                        <a href="#" class="duration-300  hover:text-gray-100 p-2 rounded transition-colors md:mx-2 lg:px-4">
+Contacto</a>
+                        <img class="h-10" src="https://focomotor.com.ar/wp-content/uploads/2021/03/appstore-300x87.png">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border bottom-0 fixed flex justify-around pb-1 pt-2 shadow-inner text-sm w-full z-20 lg:hidden">
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-home fas text-2xl h-6 mx-auto"></i> <span>Inicio</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-car-alt fas text-2xl text-2xl h-6 mx-auto"></i> <span>Listado</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="h-6 fa-wpforms fab text-2xl mx-auto"></i><span>Publicar</span> </a>
+                <a href="" class="flex flex-col justify-center max-w-full min-w-0 text-center text-gray-800 w-full"> <i class="fa-info-circle fas h-6 mx-auto text-2xl"></i> <span>Info.</span> </a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>
+    </body>
+</html>

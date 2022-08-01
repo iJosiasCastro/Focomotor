@@ -1,0 +1,9 @@
+Librería
+jwt
+https://jwt-auth.readthedocs.io/en/develop/
+
+slug
+https://github.com/cviebrock/eloquent-sluggable#background-what-is-a-slug
+
+laravel permission
+https://spatie.be/docs/laravel-permission/v5/introduction

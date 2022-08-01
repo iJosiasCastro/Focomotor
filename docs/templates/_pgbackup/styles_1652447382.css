@@ -1,0 +1,15 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-primary {
+    background-color: #077CFF;
+}
+
+.text-primary {
+    color: #077CFF;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px #666;
+}

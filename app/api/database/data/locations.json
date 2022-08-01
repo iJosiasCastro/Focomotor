@@ -1,0 +1,1079 @@
+[
+  {
+      "name": "Capital Federal",
+      "cities": [
+          "Abasto",
+          "Agronomia",
+          "Almagro",
+          "Balvanera",
+          "Barracas",
+          "Belgrano",
+          "Boedo",
+          "Caballito",
+          "Chacarita",
+          "Coghlan",
+          "Colegiales",
+          "Congreso",
+          "Constitucion",
+          "Flores",
+          "Floresta",
+          "La Boca",
+          "La Paternal",
+          "Liniers",
+          "Mataderos",
+          "Microcentro",
+          "Monserrat",
+          "Monte Castro",
+          "Nueva Pompeya",
+          "Nuñez",
+          "Once",
+          "Palermo",
+          "Parque Avellaneda",
+          "Parque Chacabuco",
+          "Parque Chas",
+          "Paternal",
+          "Puerto Madero",
+          "Recoleta",
+          "Retiro",
+          "Saavedra",
+          "San Cristobal",
+          "San Nicolas",
+          "San Telmo",
+          "Velez Sarfield",
+          "Versalles",
+          "Villa Crespo",
+          "Villa Deboto",
+          "Villa Del Parque",
+          "Villa Gral. Mitre",
+          "Villa Lugano",
+          "Villa Luro",
+          "Villa Ortuzar",
+          "Villa Pueyrredon",
+          "Villa Real",
+          "Villa Riachuelo",
+          "Villa Santa Rita",
+          "Villa Soldati",
+          "Villa Urquiza"
+      ]
+  },
+  {
+      "name": "Bs. As. Gba Norte",
+      "districts": [
+          {
+              "name": "Escobar",
+              "cities": [
+                  "Belen De Escobar",
+                  "Garin",
+                  "Maquinista",
+                  "Maschwitz",
+                  "Matheu"
+              ]
+          },
+          {
+              "name": "Jose C. Paz",
+              "cities": [
+                  "Jose C. Paz"
+              ]
+          },
+          {
+              "name": "Malvinas Argentinas",
+              "cities": [
+                  "Grand Bourg",
+                  "Los Polvorines",
+                  "Malvinas Argentinas",
+                  "Pablo Nogues",
+                  "Sourdeaux",
+                  "Tortuguitas",
+                  "Villa De Mayo"
+              ]
+          },
+          {
+              "name": "San Fernando",
+              "cities": [
+                  "San Fernando",
+                  "Victoria",
+                  "Virreyes"
+              ]
+          },
+          {
+              "name": "San Isidro",
+              "cities": [
+                  "Acassuso",
+                  "Beccar",
+                  "Boulogne",
+                  "Martinez",
+                  "San Isidro",
+                  "Villa Adelina"
+              ]
+          },
+          {
+              "name": "San Martin",
+              "cities": [
+                  "Billinghurst",
+                  "Jose Leon Suarez",
+                  "Loma Hermosa",
+                  "San Andres",
+                  "San Martin",
+                  "Villa Ballester",
+                  "Villa Lynch",
+                  "Villa Maipu"
+              ]
+          },
+          {
+              "name": "San Miguel",
+              "cities": [
+                  "Bella Vista",
+                  "Muñiz",
+                  "San Miguel",
+                  "Santa Maria"
+              ]
+          },
+          {
+              "name": "Pilar",
+              "cities": [
+                  "Del Viso",
+                  "Manuel Alberti",
+                  "Pilar",
+                  "Presidente Derqui",
+                  "Villa Rosa"
+              ]
+          },
+          {
+              "name": "Tigre",
+              "cities": [
+                  "Benavidez",
+                  "Don Torcuato",
+                  "El Talar",
+                  "Gral. Pacheco",
+                  "Nordelta",
+                  "Ricardo Rojas",
+                  "Rincon De Milberg",
+                  "Tigre",
+                  "Trocos Del Talar"
+              ]
+          },
+          {
+              "name": "Vicente Lopez",
+              "cities": [
+                  "Carapachay",
+                  "Florida",
+                  "Florida Oeste",
+                  "La Lucila",
+                  "Munro",
+                  "Olivos",
+                  "Vicente Lopez",
+                  "Villa Adelina",
+                  "Villa Martelli"
+              ]
+          }
+      ]
+  },
+  {
+      "name": "Bs. As. Gba Oeste",
+      "districts": [
+          {
+              "name": "General Rodriguez",
+              "cities": [
+                  "General Rodriguez"
+              ]
+          },
+          {
+              "name": "Hurlingham",
+              "cities": [
+                  "Hurlingham",
+                  "Villa Tesei",
+                  "William C. Morris"
+              ]
+          },
+          {
+              "name": "Ituzaingo",
+              "cities": [
+                  "Ituzaingo",
+                  "Parque Leloir",
+                  "Villa Udaondo"
+              ]
+          },
+          {
+              "name": "La Matanza",
+              "cities": [
+                  "Aldo Bonzi",
+                  "Ciudad Evita",
+                  "Gonzales Catan",
+                  "Isidro Casanova",
+                  "La Tablada",
+                  "Laferrere",
+                  "Lomas Del Mirador",
+                  "Rafael Castillo",
+                  "Ramos Mejia",
+                  "San Justo",
+                  "Tapiales",
+                  "Villa Luzuriaga",
+                  "Virrey Del Pino"
+              ]
+          },
+          {
+              "name": "Marcos Paz",
+              "cities": [
+                  "Marcos Paz"
+              ]
+          },
+          {
+              "name": "Merlo",
+              "cities": [
+                  "Libertad",
+                  "Mariano Acosta",
+                  "Merlo",
+                  "Pontevedra",
+                  "San Antonio De Padua"
+              ]
+          },
+          {
+              "name": "Moreno",
+              "cities": [
+                  "Cuartel V",
+                  "Francisco Alvarez",
+                  "La Reja",
+                  "Moreno",
+                  "Paso Del Rey",
+                  "Trujui"
+              ]
+          },
+          {
+              "name": "Moron",
+              "cities": [
+                  "Castelar",
+                  "El Palomar",
+                  "Haedo",
+                  "Moron",
+                  "Villa Sarmiento"
+              ]
+          },
+          {
+              "name": "Tres De Febrero",
+              "cities": [
+                  "Caceros",
+                  "Ciudad Jardin",
+                  "Ciudadela",
+                  "El Libertador",
+                  "Jose Ingenieros",
+                  "Loma Hermosa",
+                  "Martin Coronado",
+                  "Pablo Podesta",
+                  "Remedios De Escalada",
+                  "Saenz Peña",
+                  "Santos Lugares",
+                  "Villa Bosch",
+                  "Villa Raffo"
+              ]
+          }
+      ]
+  },
+  {
+      "name": "Bs. As. Gba Sur",
+      "districts": [
+          {
+              "name": "Almirante Brow",
+              "cities": [
+                  "Adrogue",
+                  "Burzaco",
+                  "Claypole",
+                  "Don Orione",
+                  "Glew",
+                  "Jose Marmol",
+                  "Longchamps",
+                  "Malvinas Argentinas",
+                  "Ministro Rivadavia",
+                  "Rafael Calzada",
+                  "San Fransisco De Asis",
+                  "San Jose",
+                  "Solano"
+              ]
+          },
+          {
+              "name": "Avellaneda",
+              "cities": [
+                  "Avellaneda",
+                  "Crucesita",
+                  "Dock Sud",
+                  "Gerli",
+                  "Piñeyro",
+                  "Sarandi",
+                  "Villa Dominico",
+                  "Wilde"
+              ]
+          },
+          {
+              "name": "Berazategui",
+              "cities": [
+                  "Berazategui",
+                  "El Pato",
+                  "Hudson",
+                  "Juan Maria Gutierres",
+                  "Platanos",
+                  "Ranelagh",
+                  "Villa España"
+              ]
+          },
+          {
+              "name": "Esteban Echeverria",
+              "cities": [
+                  "Canning",
+                  "El Jaguel",
+                  "Luis Guillon",
+                  "Monte Grande",
+                  "Nueve De Abril"
+              ]
+          },
+          {
+              "name": "Ezeiza",
+              "cities": [
+                  "Canning",
+                  "Carlos Spegazzini",
+                  "Ezeiza",
+                  "La Union",
+                  "Tristan Suarez"
+              ]
+          },
+          {
+              "name": "Florencio Varela",
+              "cities": [
+                  "Bosques",
+                  "Estanislao Severo Zeballos",
+                  "Florencio Varela",
+                  "Gobernador Julio A. Costa",
+                  "Ingeniero Allan",
+                  "Villa Brow",
+                  "Villa San Luis",
+                  "Villa Santa Rosa",
+                  "Villa Vatteone"
+              ]
+          },
+          {
+              "name": "Lanus",
+              "cities": [
+                  "Gerli",
+                  "Lanus",
+                  "Monte Chingolo",
+                  "Remedios De Escalada",
+                  "Valentin Alsina"
+              ]
+          },
+          {
+              "name": "Lomas De Zamora",
+              "cities": [
+                  "Banfield",
+                  "Llavallol",
+                  "Lomas De Zamora",
+                  "Temperley",
+                  "Turdera",
+                  "Villa Centenario",
+                  "Villa Fiorito"
+              ]
+          },
+          {
+              "name": "Presidente Peron",
+              "cities": [
+                  "Guernica"
+              ]
+          },
+          {
+              "name": "Quilmes",
+              "cities": [
+                  "Bernal",
+                  "Don Bosco",
+                  "Ezpeleta",
+                  "Quilmes",
+                  "Solano",
+                  "Villa La Florida"
+              ]
+          },
+          {
+              "name": "San Vicente",
+              "cities": [
+                  "Alejandro Korn",
+                  "San Vicente"
+              ]
+          }
+      ]
+  },
+  {
+      "name": "Buenos Aires Interior",
+      "cities": [
+          "9 De Julio",
+          "25 De Mayo",
+          "Alberti",
+          "Ameghino",
+          "Arrecifes",
+          "Ayacucho",
+          "Azul",
+          "Bahía Blanca",
+          "Balcarce",
+          "Baradero",
+          "Benito Juarez",
+          "Berisso",
+          "Bolivar",
+          "Bragado",
+          "Brandsen",
+          "Campana",
+          "Cañuelas",
+          "Capilla Del Señor",
+          "Capitán Sarmiento",
+          "Carhue",
+          "Carlos Casares",
+          "Carlos Tejedor",
+          "Carmen De Areco",
+          "Castelli",
+          "Chacabuco",
+          "Chascomús",
+          "Chivilcoy",
+          "Colón",
+          "Coronel Dorrego",
+          "Coronel Pringles",
+          "Coronel Suárez",
+          "Coronel Vidal",
+          "Daireaux",
+          "Dolores",
+          "Ensenada",
+          "General Alvear",
+          "General Arenales",
+          "General Belgrano",
+          "General Conesa",
+          "General Guido",
+          "General La Madrid",
+          "General Las Heras",
+          "General Lavalle",
+          "General Pinto",
+          "General Villegas",
+          "Gonzalez Chaves",
+          "Guaminí",
+          "Henderson",
+          "Junín",
+          "La Costa",
+          "La Plata",
+          "Laprida",
+          "Las Flores",
+          "Lezama",
+          "Lincoln",
+          "Lobería",
+          "Lobos",
+          "Los Toldos",
+          "Lujan",
+          "Madariaga",
+          "Magdalena",
+          "Maipú",
+          "Mar Del Plata",
+          "Mercedes",
+          "Miramar",
+          "Monte",
+          "Monte Hermoso",
+          "Navarro",
+          "Necochea",
+          "Olavarría",
+          "Patagones",
+          "Pehuajó",
+          "Pellegrini",
+          "Pergamino",
+          "Pigue",
+          "Pila",
+          "Pinamar",
+          "Puán",
+          "Punta Alta",
+          "Punta Indio",
+          "Ramallo",
+          "Rauch",
+          "Rivadavia",
+          "Rojas",
+          "Roque Pérez",
+          "Saladillo",
+          "Salliquelo",
+          "Salto",
+          "San Andrés De Giles",
+          "San Antonio De Areco",
+          "San Cayetano",
+          "San Nicolás",
+          "San Pedro",
+          "Suipacha",
+          "Tandil",
+          "Tapalque",
+          "Tornquist",
+          "Trenque Lauquen",
+          "Tres Arroyos",
+          "Tres Lomas",
+          "Vedia",
+          "Villa Gesell",
+          "Villarino",
+          "Zarate"
+      ]
+  },
+  {
+      "name": "Catamarca",
+      "cities": [
+          "Ancasti",
+          "Andalgala",
+          "Antofagasta De La Sierra",
+          "Bañado De Ovanta",
+          "Belen",
+          "Chumbicha",
+          "El Alto",
+          "Fray Mamerto Esquiu",
+          "La Merced",
+          "La Puerta",
+          "Poman",
+          "Recreo",
+          "San Fernando Del Valle De Catamarca",
+          "San Isidro",
+          "Santa Maria",
+          "Tinogasta"
+      ]
+  },
+  {
+      "name": "Chaco",
+      "cities": [
+          "Barranqueras",
+          "Campo Largo",
+          "Castelli",
+          "Charadai",
+          "Charata",
+          "Colonia Elisa",
+          "Corzuela",
+          "Fontana",
+          "General Jose De San Martin",
+          "General Pinedo",
+          "Hermoso Campo",
+          "La Leonesa",
+          "Las Breñas",
+          "Machagai",
+          "Makalle",
+          "Margarita Belen",
+          "Pampa Del Infierno",
+          "Pampa Del Infierno",
+          "Presidencia De La Plaza",
+          "Presidencia Roque Saenz Peña",
+          "Puerto Tirol",
+          "Quitilipi",
+          "Resistencia",
+          "San Bernardo",
+          "Santa Sylvina",
+          "Taco Pozo",
+          "Tres Isletas",
+          "Villa Angela",
+          "Villa Berthet"
+      ]
+  },
+  {
+      "name": "Chubut",
+      "cities": [
+          "Alto Rio Senguer",
+          "Camarones",
+          "Comodoro Rivadavia",
+          "Esquel",
+          "Gaiman",
+          "Gastre",
+          "Jose De San Martin",
+          "Lago Puelo",
+          "Las Plumas",
+          "Leleque",
+          "Paso De Indios",
+          "Puerto Madryn",
+          "Rawson",
+          "Sarmiento",
+          "Tecka",
+          "Telsen",
+          "Trelew",
+          "Trevelin"
+      ]
+  },
+  {
+      "name": "Cordoba",
+      "cities": [
+          "Alta Gracia",
+          "Arroyito",
+          "Bell Ville",
+          "Cañada Verde",
+          "Colonia Caroya",
+          "Cordoba",
+          "Cosquin",
+          "Cruz Del Eje",
+          "Dean Funes",
+          "Jesus Maria",
+          "La Carlota",
+          "Laboulaye",
+          "Marcos Juarez",
+          "Oliva",
+          "Rio Cuarto",
+          "Rio Primero",
+          "Rio Segundo",
+          "Rio Tercero",
+          "Salsacate",
+          "San Agustin",
+          "San Carlos Minas",
+          "San Fransisco",
+          "San Fransisco Del Chañar",
+          "Santa Maria De Punilla",
+          "Santa Rosa De Calamuchita",
+          "Santa Rosa De Rio Primero",
+          "Villa Carlos Paz",
+          "Villa Cura Brochero",
+          "Villa De Maria",
+          "Villa Del Totoral",
+          "Villa Dolores",
+          "Villa Maria",
+          "Villa Nueva",
+          "Villa Tulumba"
+      ]
+  },
+  {
+      "name": "Corrientes",
+      "cities": [
+          "Alvear",
+          "Bella Vista",
+          "Beron De Astrada",
+          "Caa Cati",
+          "Concepcion",
+          "Corrientes",
+          "Curuzu Cuatia",
+          "Empedrado",
+          "Esquina",
+          "Gobernador Virasoro",
+          "Goya",
+          "Itati",
+          "Ituzaingo",
+          "La Cruz",
+          "Mburucuya",
+          "Mercedes",
+          "Mocoreta",
+          "Monte Caseros",
+          "Paso De Los Libres",
+          "Saladas",
+          "San Cosme",
+          "San Luis Del Palmar",
+          "San Miguel",
+          "San Roque",
+          "Santa Lucia",
+          "Santo Tome",
+          "Sauce"
+      ]
+  },
+  {
+      "name": "Entre Rios",
+      "cities": [
+          "Colon",
+          "Concepcion Del Uruguay",
+          "Chajari",
+          "Concordia",
+          "Ibicuy",
+          "Diamante",
+          "Federacion",
+          "Federal",
+          "Gualeguay",
+          "Gualeguaychu",
+          "La Paz",
+          "Nogoya",
+          "Parana",
+          "Rosario Del Tala",
+          "San Jose De Feliciano",
+          "San Salvador",
+          "Victoria",
+          "Villaguay",
+          "Villa Elisa",
+          "Villa Paranacito"
+      ]
+  },
+  {
+      "name": "Formosa",
+      "cities": [
+          "Clorinda",
+          "Comandante Fontana",
+          "El Colorado",
+          "El Espinillo",
+          "Formosa",
+          "General Mosconi",
+          "Ingeniero Juarez",
+          "Laguna Blanca",
+          "Laguna Yema",
+          "Las Lomitas",
+          "Palo Santo",
+          "Pirane",
+          "Pozo Del Tigre",
+          "San Fransisco De Laishi"
+      ]
+  },
+  {
+      "name": "Jujuy",
+      "cities": [
+          "Abra Pampa",
+          "Caimancito",
+          "Calilegua",
+          "El Carmen",
+          "El Talar",
+          "Fraile Pintado",
+          "Humahuaca",
+          "La Quiaca",
+          "Libertador",
+          "Palpala",
+          "Perico",
+          "Rinconada",
+          "San Antonio",
+          "San Pedro De Jujuy",
+          "San Salvador De Jujuy",
+          "Santa Catalina",
+          "Santa Clara",
+          "Susques",
+          "Tilcara",
+          "Tumbaya",
+          "Valle Grande",
+          "Yuto"
+      ]
+  },
+  {
+      "name": "La Pampa",
+      "cities": [
+          "25 De Mayo",
+          "Algarrobo Del Aguila",
+          "Bernasconi",
+          "Catrilo",
+          "Cuchilo-Co",
+          "Eduardo Castex",
+          "General Acha",
+          "General Pico",
+          "Guatrache",
+          "Intendente Alvear",
+          "La Adela",
+          "Limay Mahuida",
+          "Macachin",
+          "Parera",
+          "Puelches",
+          "Quemu Quemu",
+          "Realico",
+          "Santa Isabel",
+          "Santa Rosa",
+          "Toay",
+          "Trenel",
+          "Victoria"
+      ]
+  },
+  {
+      "name": "La Rioja",
+      "cities": [
+          "Aimogasta",
+          "Aminga",
+          "Catuna",
+          "Chamical",
+          "Chepes",
+          "Chilecito",
+          "Famatina",
+          "La Rioja",
+          "Malanzan",
+          "Olta",
+          "Patquia",
+          "San Blas",
+          "Tama",
+          "Ulapes",
+          "Villa Castelli",
+          "Villa Sanagasta",
+          "Villa Union",
+          "Vinchina"
+      ]
+  },
+  {
+      "name": "Mendoza",
+      "cities": [
+          "General Alvear",
+          "Godoy Cruz",
+          "Guaymallen",
+          "Junin",
+          "La Paz",
+          "Las Heras",
+          "Lavalle",
+          "Lujan De Cuyo",
+          "Maipu",
+          "Malargue",
+          "Mendoza",
+          "Rivadavia",
+          "San Carlos",
+          "San Martin",
+          "San Rafael",
+          "Santa Rosa",
+          "Tunuyan",
+          "Tupungato"
+      ]
+  },
+  {
+      "name": "Misiones",
+      "cities": [
+          "25 De Mayo",
+          "Apostoles",
+          "Aristobulo Del Valle",
+          "Bernardo De Irigoyen",
+          "Campo Grande",
+          "Candelaria",
+          "Concepcion De La Sierra",
+          "El Sobervio",
+          "Eldorado",
+          "Guarani",
+          "Iguazu",
+          "Jardin America",
+          "Leandro N. Alem",
+          "Libertador Gral. San Martin",
+          "Montecarlo",
+          "Obera",
+          "Posadas",
+          "Puerto Iguazu",
+          "San Ignacio",
+          "San Javier",
+          "San Pedro",
+          "San Vicente"
+      ]
+  },
+  {
+      "name": "Neuquen",
+      "cities": [
+          "Alumine",
+          "Andacollo",
+          "Añelo",
+          "Buta Ranquil",
+          "Centenario",
+          "Chos Malal",
+          "Cutral Co",
+          "El Huecu",
+          "Junin De Los Andes",
+          "Las Coloradas",
+          "Las Lajas",
+          "Loncopue",
+          "Neuquen",
+          "Picun Leufu",
+          "Piedra Del Aguila",
+          "Plaza Huincul",
+          "Plottier",
+          "Rincon De Los Sauces",
+          "San Martin De Los Andes",
+          "San Patricio Del Chañar",
+          "Senillosa",
+          "Villa La Angostura",
+          "Zapala"
+      ]
+  },
+  {
+      "name": "Rio Negro",
+      "cities": [
+          "Allen",
+          "Bariloche",
+          "Catriel",
+          "Choele Choel",
+          "Cinco Saltos",
+          "Cipolletti",
+          "Conesa",
+          "Dina Huapi",
+          "El Bolson",
+          "El Cuy",
+          "General Roca",
+          "Gral. Enrique Godoy",
+          "Gral. Fernandez Oro",
+          "Ingeniero Huergo",
+          "Ingeniero Jacobacci",
+          "Lamarque",
+          "Luis Beltran",
+          "Maquinchao",
+          "Ñorquinco",
+          "Pilcaniyeu",
+          "Rio Colorado",
+          "San Antonio Oeste",
+          "Sierra Colorada",
+          "Sierra Grande",
+          "Valcheta",
+          "Viedma",
+          "Villa Regina"
+      ]
+  },
+  {
+      "name": "Salta",
+      "cities": [
+          "Cachi",
+          "Cafayate",
+          "Cerrillos",
+          "Chicoana",
+          "General Guemes",
+          "Guachipas",
+          "Hipolito Yrigoyen",
+          "Iruya",
+          "Joaquin V. Gonzalez",
+          "La Caldera",
+          "La Candelaria",
+          "La Merced",
+          "La Poma",
+          "La Viña",
+          "Molinos",
+          "Oran",
+          "Pichanal",
+          "Rivadavia",
+          "Rosario De La Frontera",
+          "Rosario De Lerma",
+          "Salta",
+          "San Antonio De Los Cobres",
+          "San Carlos",
+          "San Jose De Metan",
+          "Santa Victoria",
+          "Tartagal"
+      ]
+  },
+  {
+      "name": "San Juan",
+      "cities": [
+          "9 De Julio",
+          "Aberastain",
+          "Calingasta",
+          "Caucete",
+          "Chimbas",
+          "General San Martin",
+          "Media Agua",
+          "Rivadavia",
+          "Rodeo",
+          "San Agustin",
+          "San Jose De Jachal",
+          "San Juan",
+          "San Martin",
+          "Santa Lucia",
+          "Santa Rosa",
+          "Villa Basilio Nievas",
+          "Villa Del Salvador",
+          "Villa Ibañez",
+          "Villa Krause",
+          "Villa Paula A. De Sarmiento"
+      ]
+  },
+  {
+      "name": "San Luis",
+      "cities": [
+          "Buena Esperanza",
+          "Concaran",
+          "Juana Koslay",
+          "La Toma",
+          "Merlo",
+          "San Fransisco",
+          "San Luis",
+          "San Martin",
+          "Santa Rosa De Conlara",
+          "Tilisarao",
+          "Villa General Roca",
+          "Villa Mercedes"
+      ]
+  },
+  {
+      "name": "Santa Cruz",
+      "cities": [
+          "Calafate",
+          "Caleta Olivia",
+          "Comandante Luis Piedrabuena",
+          "Gobernador Gregores",
+          "Las Heras",
+          "Perito Moreno",
+          "Pico Truncado",
+          "Puerto Deseado",
+          "Puerto San Julian",
+          "Puerto Santa Cruz",
+          "Rio Gallegos",
+          "Rio Turbio",
+          "Veintiocho De Noviembre"
+      ]
+  },
+  {
+      "name": "Santa Fe",
+      "cities": [
+          "Arroyo Seco",
+          "Cañada De Gomez",
+          "Carcaraña",
+          "Casilda",
+          "Coronda",
+          "Esperanza",
+          "Firmat",
+          "Fray Luis Beltran",
+          "Galvez",
+          "Granadero Baigorria",
+          "Helvecia",
+          "Las Rosas",
+          "Melincue",
+          "Perez",
+          "Rafaela",
+          "Reconquista",
+          "Rosario",
+          "Rufino",
+          "San Cristobal",
+          "San Javier",
+          "San Jorge",
+          "San Justo",
+          "San Lorenzo",
+          "Santa Fe",
+          "Santo Tome",
+          "Sastre",
+          "Sunchales",
+          "Tostado",
+          "Venado Tuerto",
+          "Vera",
+          "Villa Constitucion",
+          "Villa Gobernador Galvez"
+      ]
+  },
+  {
+      "name": "Santiago Del Estero",
+      "cities": [
+          "Añatuya",
+          "Arraga",
+          "Bandera",
+          "Brea Pozo",
+          "Campo Gallo",
+          "Fernandez",
+          "Frias",
+          "Garza",
+          "Herrera",
+          "La Banda",
+          "La Cañada",
+          "Loreto",
+          "Los Telares",
+          "Monte Quemado",
+          "Nueva Esperanza",
+          "Pinto",
+          "Pozo Hondo",
+          "Quimili",
+          "Rio Hondo",
+          "San Pedro De Guasayan",
+          "Santiago Del Estero",
+          "Selva",
+          "Sumampa",
+          "Suncho Corral",
+          "Villa Atamisqui",
+          "Villa Ojo De Agua",
+          "Villa Union"
+      ]
+  },
+  {
+      "name": "Tierra Del Fuego",
+      "cities": [
+          "Rio Grande",
+          "Tolhuin",
+          "Ushuaia"
+      ]
+  },
+  {
+      "name": "Tucuman",
+      "cities": [
+          "Aguilares",
+          "Alderetes",
+          "Banda Del Rio Sali",
+          "Bella Vista",
+          "Buruyacu",
+          "Concepcion",
+          "Famailla",
+          "Graneros",
+          "Juan Bautista Alberdi",
+          "La Cocha",
+          "Lules",
+          "Monteros",
+          "San Miguel De Tucuman",
+          "Simoca",
+          "Tafi Del Valle",
+          "Tafi Viejo",
+          "Trancas",
+          "Yerba Buena"
+      ]
+  }
+]

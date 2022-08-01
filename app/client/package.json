@@ -1,0 +1,29 @@
+{
+  "name": "client_focomotor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth-next": "^5.0.0-1648802546.c9880dc",
+    "@nuxtjs/axios": "^5.13.6",
+    "browser-image-compression": "^2.0.0",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "v-photoswipe": "^1.0.3-1",
+    "vue": "^2.6.14",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-server-renderer": "^2.6.14",
+    "vue-ssr-carousel": "^1.4.0",
+    "vue-template-compiler": "^2.6.14",
+    "vuedraggable": "^2.24.3",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

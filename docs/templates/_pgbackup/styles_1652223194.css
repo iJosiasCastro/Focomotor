@@ -1,0 +1,19 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.bg-primary {
+    background-color: #077CFF;
+}
+
+.text-primary {
+    color: #077CFF;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 3px #555;
+}
