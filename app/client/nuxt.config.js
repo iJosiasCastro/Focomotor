@@ -78,8 +78,8 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        url: 'https://api.focomotor.com.ar',
-        // url: 'http://192.168.0.186:8080',
+        // url: 'https://api.focomotor.com.ar',
+        url: 'http://192.168.0.186:8080',
         token: {
           property: 'access_token',
           maxAge: 60 * 60
