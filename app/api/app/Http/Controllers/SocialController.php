@@ -13,20 +13,18 @@ use Laravel\Socialite\Facades\Socialite;
 class SocialController extends Controller
 {
 
-    public function login () {
+    public function login(){
         return Socialite::driver('google')->stateless()->redirect();
     }
 
-    protected function loginGoogle($user)
-    {
+    protected function loginGoogle($user){
         Auth::login($user);
         $token = JWTAuth::fromUser($user);
         // return $token;
         return redirect(env('CLIENT_URL').'google-login?token='.$token);
     } 
 
-    public function callback()
-    {
+    public function callback(){
         $user = Socialite::driver('google')->stateless()->user();
         $userExist = User::where('email', $user->email)->first();
         
@@ -53,8 +51,7 @@ class SocialController extends Controller
         }
     }
 
-    protected function respondWithToken($token)
-    {
+    protected function respondWithToken($token){
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',

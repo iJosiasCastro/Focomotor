@@ -141,17 +141,6 @@ export default {
                 images: [],
                 description: '',
 
-                // title: 'Vehicle',
-                // price: 5000,
-                // year: 1950,
-                // mileage: 0,
-                // fuel_id: 2,
-                // category_id: 1,
-                // brand_id: '',
-                // model_id: '',
-
-                // images: [],
-                // description: '',
             },
             data:{
                 fuels: [],
@@ -188,7 +177,7 @@ export default {
             const e = this.vehicle.category_id
 
             if(e){
-                this.data.brands = await this.$axios.$get(`categories/${e}`)
+                this.data.brands = await this.$axios.$get(`brands/${e}`)
             }else{
                 this.data.brands = []
             }
@@ -200,7 +189,7 @@ export default {
             const e = this.vehicle.brand_id
 
             if(e){
-                this.data.models = await this.$axios.$get(`categories/${this.vehicle.category_id}/${e}`)
+                this.data.models = await this.$axios.$get(`models/${this.vehicle.category_id}/${e}`)
             }else{
                 this.data.models = []
             }
@@ -213,18 +202,18 @@ export default {
             const vehicle = Object.fromEntries(Object.entries(this.vehicle).filter(([k, v]) => v !== ''))
             this.$axios[method](url, vehicle)
                 .then(res => {
-                    // console.log(vehicle)
+                    console.log(vehicle)
                     this.$router.push({name:'user.dashboard'})
                 })
                 .catch(err => {
                     this.errors = {}
                     if(err.response.data.errors){
-                        // console.log(err.response.data)
+                        console.log(err.response.data)
                         window.scrollTo(0, 0)
                         this.errors = err.response.data.errors
 
                     }else{
-                        // console.log(err.response)
+                        console.log(err.response)
                         console.error(err)
                     }
                 })

@@ -20,23 +20,13 @@ use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
-    /**
-     * Create a new AuthController instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login', 'register', 'validatePasswordRequest', 'resetPassword', 'exist']]);
+    // Create a new AuthController instance.
+    public function __construct(){
+        $this->middleware('auth:api', ['except' => ['login', 'register', 'validatePasswordRequest', 'resetPassword', 'existUser']]);
     }
 
-    /**
-     * Get a JWT via given credentials.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function login()
-    {
+    // Get a JWT via given credentials.
+    public function login(){
         // If social login complete return login
         if(request()->token){
             return $this->respondWithToken(request()->token);
@@ -45,13 +35,14 @@ class AuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['message' => 'Usuario o contraseña inválidos'], 401);
+            return response()->json(['message' => 'La contraseña ingresada es incorrecta'], 401);
         }
 
         return $this->respondWithToken($token);
     }
 
-    public function exist(Request $request){
+    // Check if the email belongs to a user
+    public function existUser(Request $request){
         $request->validate([
             'email' => 'required|string|email|max:100'
         ]);
@@ -65,11 +56,7 @@ class AuthController extends Controller
         }
     }
 
-    /**
-     * Get the authenticated User.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    // Get the authenticated User.
     public function user()
     {
         $user = auth()->user();
@@ -81,11 +68,7 @@ class AuthController extends Controller
         return $user;
     }
 
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    // Log the user out (Invalidate the token).
     public function logout()
     {
         auth()->logout();
@@ -93,23 +76,13 @@ class AuthController extends Controller
         return response()->json(['message' => 'Se cerró la sesión correctamente']);
     }
 
-    /**
-     * Refresh a token.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    // Refresh a token.
     public function refresh()
     {
         return $this->respondWithToken(auth()->refresh());
     }
 
-    /**
-     * Get the token array structure.
-     *
-     * @param  string $token
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
+    // Get the token array structure.
     protected function respondWithToken($token)
     {
         return response()->json([
@@ -119,6 +92,7 @@ class AuthController extends Controller
         ]);
     }
 
+    // Register the user
     public function register(Request $request){
         $request->validate([
             'email' => 'required|string|email|max:100|unique:users',
@@ -137,6 +111,7 @@ class AuthController extends Controller
         return $token;
     }
 
+    // Update the user
     public function update(UserRequest $request){
         $user= Auth::user();
         $user->name = $request->name;
@@ -151,9 +126,10 @@ class AuthController extends Controller
         $token = JWTAuth::fromUser($user);
         return $token;
     }
-
     
+    // Send a email with the password reset token
     public function validatePasswordRequest(Request $request){
+
         //You can add validation login here
         $user = User::where('email', '=', $request->email)->first();
 
@@ -169,9 +145,13 @@ class AuthController extends Controller
         ];
         DB::table('password_resets')->insert($token);
 
-        return $this->sendResetEmail($user, $token['token']);
+        $email = new ResetPasswordMailable($user, $token);
+        Mail::to($user['email'])->send($email);
+        return response(['message'=>'Se envió el correo de recuperación, revisá tu email para continuar']);
     }
 
+
+    // Reset the password with the token
     public function resetPassword(Request $request){
         //Validate input
         $request->validate([
@@ -203,12 +183,6 @@ class AuthController extends Controller
 
         $loginToken = JWTAuth::fromUser($user);
         return response(['message'=>'Tu contraseña fue cambiada correctamente', 'token' => $loginToken]);
-    }
-
-    public function sendResetEmail($user, $token){
-        $email = new ResetPasswordMailable($user, $token);
-        Mail::to($user['email'])->send($email);
-        return response(['message'=>'Se envió el correo de recuperación, revisá tu email para continuar']);
     }
 
 

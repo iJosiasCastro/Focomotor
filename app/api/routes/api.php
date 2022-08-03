@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FilterController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialController;
@@ -29,52 +30,74 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group([
-
+    // Auth Controller
     'middleware' => 'api',
     'prefix' => 'auth'
-
-], function ($router) {
+], function(){
 
     Route::post('login', [AuthController::class, 'login']);
-    Route::post('exist', [AuthController::class, 'exist']);
     Route::post('update', [AuthController::class, 'update']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
     Route::post('register', [AuthController::class, 'register']);
     Route::get('user', [AuthController::class, 'user']);
+
+    Route::post('exist', [AuthController::class, 'existUser']);
     Route::get('user/vehicles', [VehicleController::class, 'user']);
+
+    Route::post('reset_password_without_token', [AuthController::class, 'validatePasswordRequest']);
+    Route::post('reset_password_with_token', [AuthController::class, 'resetPassword']);
     
 });
-Route::get('author/{user}', [VehicleController::class, 'author']);
 
-Route::get('years', [CategoryController::class, 'years']);
+Route::group([
+    // Category Controller
+    'middleware' => 'api',
+], function(){
+    Route::get('years', [CategoryController::class, 'years']);
+    
+    Route::get('categories', [CategoryController::class, 'categories']);
+    Route::get('brands/{categoryId}', [CategoryController::class, 'brands']);
+    Route::get('models/{categoryId}/{brandId}', [CategoryController::class, 'models']);
+    
+    Route::get('states', [CategoryController::class, 'states']);
+    Route::get('cities/{stateId}', [CategoryController::class, 'cities']);
+    
+    Route::get('fuels', function(){return Fuel::all();});
+    
+    Route::get('cities_filter', [FilterController::class, 'citiesFilter']);
+});
 
-Route::get('categories', [CategoryController::class, 'index']);
-Route::get('categories/{categoryId}', [CategoryController::class, 'show']);
-Route::get('categories/{categoryId}/{brandId}', [CategoryController::class, 'showBrand']);
 
-Route::get('cities_filter', [LocationController::class, 'citiesFilter']);
+Route::group([
+    // Vehicle Controller
+    'middleware' => 'api',
+], function(){
+    Route::get('vehicles/home', [VehicleController::class, 'home']);
+    Route::get('vehicles/{filters?}', [VehicleController::class, 'index']);
+    Route::get('vehicles/author/{user}', [VehicleController::class, 'author']);
 
-Route::get('states', [LocationController::class, 'index']);
-Route::get('states/{stateId}', [LocationController::class, 'show']);
-// Route::get('states/{stateId}/{districtId}', [LocationController::class, 'showDistrict']);
+    Route::get('vehicle/{vehicle}', [VehicleController::class, 'show']);
+    Route::post('vehicle', [VehicleController::class, 'store']);
+    Route::put('vehicle/{vehicle}', [VehicleController::class, 'update']);
+    Route::delete('vehicle/{vehicle}', [VehicleController::class, 'destroy']);
+});
 
-Route::get('fuels', function(){return Fuel::all();});
 
 
-Route::get('vehicles/home', [VehicleController::class, 'home']);
-Route::get('vehicles/{filters?}', [VehicleController::class, 'index']);
-Route::get('vehicle/{vehicle}', [VehicleController::class, 'show']);
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'email'
+], function(){
+    Route::post('vehicle/{vehicle}', [MailController::class, 'message']);
+    Route::post('contact', [MailController::class, 'contact']);
+    Route::post('plan', [MailController::class, 'plan']);
+});
 
-Route::post('vehicle', [VehicleController::class, 'store']);
-Route::put('vehicle/{vehicle}', [VehicleController::class, 'update']);
-Route::delete('vehicle/{vehicle}', [VehicleController::class, 'destroy']);
 
-Route::post('message/{vehicle}', [MailController::class, 'message']);
 
-Route::post('contact', [MailController::class, 'contact']);
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web']], function(){
     Route::get('/google-login', [SocialController::class, 'login']);
     Route::get('/google-callback', [SocialController::class, 'callback']);
 });
@@ -86,9 +109,3 @@ Route::get('test', function(){
 
     // return $img->response('jpg');
 });
-
-Route::post('reset_password_without_token', [AuthController::class, 'validatePasswordRequest']);
-Route::post('reset_password_with_token', [AuthController::class, 'resetPassword']);
-    
-
-Route::post('plan/email', [MailController::class, 'plan']);

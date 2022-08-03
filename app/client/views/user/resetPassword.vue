@@ -113,7 +113,7 @@ export default {
   methods: {
     sendEmail() {
       this.sending = true
-      this.$axios.$post('reset_password_without_token', this.user)
+      this.$axios.$post('auth/reset_password_without_token', this.user)
         .then(res => {
           // console.log(res)
           this.user.email = ''
@@ -135,7 +135,7 @@ export default {
     },
     resetPassword(){
       // console.log(this.$route.query)
-      this.$axios.$post('reset_password_with_token', {...this.user, ...this.$route.query})
+      this.$axios.$post('auth/reset_password_with_token', {...this.user, ...this.$route.query})
         .then(res => {
           // console.log(res)
           this.user.email = ''

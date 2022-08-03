@@ -71,7 +71,7 @@ export default {
     methods:{
         submit(){
             this.sending = true
-            this.$axios.post('contact/', this.form)
+            this.$axios.post('email/contact', this.form)
                 .then(res => {
                     // console.log(res)
                     window.scrollTo(0, 0)

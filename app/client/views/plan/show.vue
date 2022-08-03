@@ -71,7 +71,7 @@ export default {
   methods:{
     sendEmail() {
       this.sending = true
-      this.$axios.$post('plan/email', this.form)
+      this.$axios.$post('email/plan', this.form)
         .then(res => {
           // console.log(res)
           this.errors = null

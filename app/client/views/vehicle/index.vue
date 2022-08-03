@@ -24,7 +24,6 @@ export default {
   async asyncData({ $axios, query }){
     const {prev_page_url, next_page_url, current_page, links, data} = await $axios.$get('vehicles?'+ new URLSearchParams(query).toString())
     const categories = await $axios.$get('categories')
-    // const locations = await $axios.$get('states')
     const cities = await $axios.$get('cities_filter')
     const fuels = await $axios.$get('fuels')
     return {
@@ -64,16 +63,18 @@ export default {
     }
   },
   async watchQuery(v){
-    const {prev_page_url, next_page_url, current_page, links, data} = await this.$axios.$get('vehicles?'+ new URLSearchParams(v).toString())
-    this.vehicles = data,
-    
-    this.page = {
-      links,
-      prev: prev_page_url,
-      next: next_page_url,
-      current: current_page
+    if(this){
+      const {prev_page_url, next_page_url, current_page, links, data} = await this.$axios.$get('vehicles?'+ new URLSearchParams(v).toString())
+      this.vehicles = data,
+      
+      this.page = {
+        links,
+        prev: prev_page_url,
+        next: next_page_url,
+        current: current_page
+      }
+      window.scrollTo(0,0)
     }
-    window.scrollTo(0,0)
 
     
   }

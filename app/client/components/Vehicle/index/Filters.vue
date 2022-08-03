@@ -1,8 +1,7 @@
 <template>
 <div>
     <VehicleIndexFilterMobileMenu @openFilter="showFiltersModal = true" @openOrderBy="showOrderByModal = true" />
-
-    <VehicleIndexFilterOrderByDropdown @closeOrderBy="showOrderByModal = false" :class="{'hidden' : !showOrderByModal}" v-click-outside="closeOrderByModal" :query="query" /> 
+    <VehicleIndexFilterOrderByDropdown @closeOrderBy="showOrderByModal = false" :class="{'hidden' : !showOrderByModal}" v-click-outside="closeOrderByModal" :query="query" class="lg:hidden max-w-6xl mx-auto absolute left-0 ml-2 md:ml-4 mt-2 md:mt-48 w-56 bg-gray-200 border border-gray-400 border-solid divide-gray-100 divide-y rounded shadow z-10"  /> 
     
     <div class="h-5 lg:h-16"></div>
     <section class="gap-2 grid grid-cols-12 max-w-6xl mx-auto px-2 md:gap-4">
@@ -18,6 +17,7 @@
                 <div class="hidden lg:block">
                     <VehicleIndexFilterOrderBy :query="query" @openOrderBy="showOrderByModal = true" />
                     <div class="h-6"> </div>
+                    <VehicleIndexFilterOrderByDropdown @closeOrderBy="showOrderByModal = false" :class="{'hidden' : !showOrderByModal}" v-click-outside="closeOrderByModal" :query="query" class="max-w-6xl mx-auto absolute -mt-4"  /> 
                 </div>
                 <VehicleIndexFilterCategories :query="query" :categories="categories" />
                 <div class="h-6"></div>

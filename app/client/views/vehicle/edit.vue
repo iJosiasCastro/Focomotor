@@ -24,11 +24,6 @@ export default {
     async asyncData({params, $axios, $auth}){
         const data = {}
         var v = {}
-        // var v = await $axios.$get('vehicle/' + params.slug)
-        // data.categories = await $axios.$get('categories')
-        // data.fuels = await $axios.$get('fuels')
-        // data.states = await $axios.$get('states')
-        // data.years = await $axios.$get('years')
 
         await Promise.all([
             $axios.$get('vehicle/' + params.slug).then(r => v=r),
@@ -42,8 +37,8 @@ export default {
             data.user = await $axios.$get('auth/user')
         }
 
-        data.brands = await $axios.$get(`categories/${v.category_id}`)
-        data.models = v.brand_id ? await $axios.$get(`categories/${v.category_id}/${v.brand_id}`) : {}
+        data.brands = await $axios.$get(`brands/${v.category_id}`)
+        data.models = v.brand_id ? await $axios.$get(`models/${v.category_id}/${v.brand_id}`) : {}
 
         return {v,data}
     }

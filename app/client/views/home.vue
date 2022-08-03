@@ -77,7 +77,7 @@ export default {
   },
   async asyncData({ $axios }){
     const categories = await $axios.$get('categories')
-    const brands = await $axios.$get('categories/1')
+    const brands = await $axios.$get('brands/1')
     const cities = await $axios.$get('cities_filter')
 
     const vehicles = await $axios.$get('vehicles/home')

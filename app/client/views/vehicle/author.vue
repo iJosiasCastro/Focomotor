@@ -37,7 +37,7 @@ export default {
         }
     },
     async asyncData({$axios, params, error}){
-        return await $axios.$get('author/'+params.slug)
+        return await $axios.$get('vehicles/author/'+params.slug)
         .then(res => {
             return {data: res}
         })

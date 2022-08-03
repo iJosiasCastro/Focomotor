@@ -47,7 +47,7 @@ export default {
             const e = this.categories.findIndex(e => e.slug == this.category)+1
 
             if(e){
-                var res = await this.$axios.$get(`categories/${e}`)
+                var res = await this.$axios.$get(`brands/${e}`)
                 this.$emit('selectCategory', res)
             }
 

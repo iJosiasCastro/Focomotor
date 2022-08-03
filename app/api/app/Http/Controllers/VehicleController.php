@@ -32,17 +32,17 @@ class VehicleController extends Controller
     }
 
     public function index(){
-        // return request()->category;
         $vehicles = Vehicle::
             with('user', 'user.state', 'user.district', 'user.city', 'images')
             ->select('id', 'title', 'slug', 'price', 'year', 'mileage', 'user_id', 'fuel_id', 'category_id', 'brand_id', 'model_id');
 
-        $vehicles = $this->applyFilters($vehicles);
+        $vehicles = $this->filters($vehicles);
         
         $vehicles = $vehicles->paginate(30);
         return $vehicles;
     }
-    public function applyFilters($vehicles){
+
+    public function filters($vehicles){
         $filters = [
             ["name" => "search", "type" => "search"],
             ["name" => "category", "type" => "slug"],
@@ -143,7 +143,7 @@ class VehicleController extends Controller
             ]);
     
             $vehicle = Vehicle::create($request->all()); 
-            return $this->storeImages($request->images, $vehicle);
+            return $this->image_store($request->images, $vehicle);
             
             return $vehicle;
         }else{
@@ -156,7 +156,7 @@ class VehicleController extends Controller
     public function update(VehicleRequest $request, Vehicle $vehicle){
         // $this->authorize('user_id', $vehicle);
         if($vehicle->user_id == Auth::id()){
-            $this->updateImages($request->images, $vehicle);
+            $this->image_update($request->images, $vehicle);
             $vehicle->update($request->all());
         }else{
             return response(['message' => 'Unauthorized.'] , 403);
@@ -166,7 +166,7 @@ class VehicleController extends Controller
     public function destroy(Vehicle $vehicle){
         if($vehicle->user_id == Auth::id()){
             foreach ($vehicle->images as $image) {
-                $this->deleteImage($image);
+                $this->image_delete($image);
             }
             $vehicle->delete();
             return $this->user();
@@ -176,7 +176,6 @@ class VehicleController extends Controller
     }
 
 
-    // User
     public function user(){
         return $this->vehiclesFromUser(Auth::user());
     }
@@ -211,13 +210,13 @@ class VehicleController extends Controller
 
 
     // Images
-    protected function deleteImage($image){
+    protected function image_delete($image){
         Storage::delete('vehicles/large/'.$image['name']);
         Storage::delete('vehicles/thumbnail/'.$image['name']);
         $image->delete();
     }
 
-    protected function updateImages($images, Vehicle $vehicle){
+    protected function image_update($images, Vehicle $vehicle){
         foreach ($vehicle->images as $vehicleImage) {
             $exist = false;
             foreach ($images as $image) {
@@ -228,7 +227,7 @@ class VehicleController extends Controller
 
             if(!$exist){
                 // Delete from storage and database
-                $this->deleteImage($vehicleImage);
+                $this->image_delete($vehicleImage);
             }
         }
 
@@ -237,11 +236,11 @@ class VehicleController extends Controller
         }
 
         // Store all images
-        $this->storeImages($images, $vehicle);
+        $this->image_store($images, $vehicle);
 
     }
     
-    protected function storeImages($images, Vehicle $vehicle){
+    protected function image_store($images, Vehicle $vehicle){
         for ($i=1; $i <= count($images); $i++) { 
             $imageName='';
             if(isset($images[$i-1]['name'])){
