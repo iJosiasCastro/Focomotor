@@ -4,3 +4,4 @@ provincia->estado->ciudad
 Filtrar por marca->categorias
 
 Mejorar buscador -> incluir marca y modelo
+Añadir perfil de administrador (Permitir editar cada vehículo)

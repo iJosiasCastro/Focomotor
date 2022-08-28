@@ -1,6 +1,6 @@
 <template>
 <App>
-    <VehicleIndexFilters :categories="categories" :cities="cities" :fuels="fuels" :page="page" :query="query" :vehicles="vehicles">
+    <VehicleIndexFilters :categories="categories" :brands="brands" :models="models" :cities="cities" :fuels="fuels" :page="page" :query="query" :vehicles="vehicles">
 
         <VehicleCard v-for="(v,i) in vehicles" :key="i" :vehicle="v"/>
 
@@ -24,11 +24,24 @@ export default {
   async asyncData({ $axios, query }){
     const {prev_page_url, next_page_url, current_page, links, data} = await $axios.$get('vehicles?'+ new URLSearchParams(query).toString())
     const categories = await $axios.$get('categories')
-    const cities = await $axios.$get('cities_filter')
+    const cities = await $axios.$get('filter/cities/1')
     const fuels = await $axios.$get('fuels')
+    var brands = []
+    var models = []
+
+    if(query.category){
+      brands = await $axios.$get(`filter/brands/${query.category}`)
+    }
+    
+    if(query.brand){
+      models = await $axios.$get(`filter/models/${query.category}/${query.brand}`)
+    }
+
     return {
       query,
       categories,
+      brands,
+      models,
       cities,
       fuels,
       vehicles: data,
@@ -63,20 +76,18 @@ export default {
     }
   },
   async watchQuery(v){
-    if(this){
-      const {prev_page_url, next_page_url, current_page, links, data} = await this.$axios.$get('vehicles?'+ new URLSearchParams(v).toString())
-      this.vehicles = data,
+    // if(this){
+    //   const {prev_page_url, next_page_url, current_page, links, data} = await this.$axios.$get('vehicles?'+ new URLSearchParams(v).toString())
+    //   this.vehicles = data,
       
-      this.page = {
-        links,
-        prev: prev_page_url,
-        next: next_page_url,
-        current: current_page
-      }
-      window.scrollTo(0,0)
-    }
-
-    
+    //   this.page = {
+    //     links,
+    //     prev: prev_page_url,
+    //     next: next_page_url,
+    //     current: current_page
+    //   }
+    //   window.scrollTo(0,0)
+    // }
   }
 }
 </script>

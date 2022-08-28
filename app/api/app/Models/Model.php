@@ -29,5 +29,9 @@ class Model extends EloquentModel
 
     public function brand(){
         return $this->belongsTo(Brand::class);
-    }    
+    }
+    
+    public function vehicles(){
+        return $this->hasMany(Vehicle::class);
+    }
 }

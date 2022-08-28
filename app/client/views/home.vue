@@ -2,7 +2,7 @@
 <App>
     <h1 class="hidden">Focomotor</h1>
 
-    <PartialsHomeSearchMenu :categories="categories" :cities="cities" :brands="brands" @selectCategory="e=>brands=e" />
+    <PartialsHomeSearchMenu :receivedData="data" />
 
     <div class="h-10 lg:h-16"></div>
 
@@ -76,12 +76,25 @@ export default {
       }
   },
   async asyncData({ $axios }){
-    const categories = await $axios.$get('categories')
-    const brands = await $axios.$get('brands/1')
-    const cities = await $axios.$get('cities_filter')
+    const data = {
+        categories: [],
+        brands: [],
+        models: [],
+        // states: [],
+        // districts: [],
+        // cities: [],
+    }
 
-    const vehicles = await $axios.$get('vehicles/home')
-    return {vehicles, categories, cities, brands}
+    var vehicles
+
+    await Promise.all([
+        $axios.$get('categories').then(r => data.categories=r),
+        $axios.$get('filter/brands/1').then(r => data.brands=r),
+        // $axios.$get('states').then(r => data.states=r),
+        $axios.$get('vehicles/home').then(r => vehicles=r),
+    ])
+
+    return {vehicles, data}
   },
 }
 </script>

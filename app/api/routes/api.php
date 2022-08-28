@@ -3,11 +3,9 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FilterController;
-use App\Http\Controllers\LocationController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\VehicleController;
-use App\Models\Fuel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -63,9 +61,20 @@ Route::group([
     Route::get('states', [CategoryController::class, 'states']);
     Route::get('cities/{stateId}', [CategoryController::class, 'cities']);
     
-    Route::get('fuels', function(){return Fuel::all();});
+    Route::get('fuels', [CategoryController::class, 'fuels']);
     
-    Route::get('cities_filter', [FilterController::class, 'citiesFilter']);
+});
+
+Route::group([
+    // Filter Controller
+    'middleware' => 'api',
+    'prefix' => 'filter'
+], function(){
+    Route::get('states', [FilterController::class, 'states']);
+    Route::get('cities/{stateId}', [FilterController::class, 'cities']);
+
+    Route::get('brands/{categoryId}', [FilterController::class, 'brands']);
+    Route::get('models/{categoryId}/{brandId}', [FilterController::class, 'models']);
 });
 
 

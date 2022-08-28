@@ -19,8 +19,18 @@
                     <div class="h-6"> </div>
                     <VehicleIndexFilterOrderByDropdown @closeOrderBy="showOrderByModal = false" :class="{'hidden' : !showOrderByModal}" v-click-outside="closeOrderByModal" :query="query" class="max-w-6xl mx-auto absolute -mt-4"  /> 
                 </div>
-                <VehicleIndexFilterCategories :query="query" :categories="categories" />
-                <div class="h-6"></div>
+                <div v-if="!query.category">
+                    <VehicleIndexFilterCategories :query="query" :categories="categories" />
+                    <div class="h-6"></div>
+                </div>
+                <div v-if="brands.length && !query.brand">
+                    <VehicleIndexFilterBrands :query="query" :brands="brands" />
+                    <div class="h-6"></div>
+                </div>
+                <div v-if="models.length && !query.model">
+                    <VehicleIndexFilterModels :query="query" :models="models" />
+                    <div class="h-6"></div>
+                </div>
                 <VehicleIndexFilterPrice :query="query" />
                 <div class="h-6"></div>
                 <VehicleIndexFilterFuels :query="query" :fuels="fuels" />
@@ -58,7 +68,7 @@
 
 <script>
 export default {
-    props: ['categories', 'cities', 'fuels', 'page', 'query', 'vehicles'],
+    props: ['categories', 'brands', 'models', 'cities', 'fuels', 'page', 'query', 'vehicles'],
     data(){
         return {
             filters:{},

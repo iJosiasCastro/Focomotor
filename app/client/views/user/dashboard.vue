@@ -62,7 +62,7 @@
     <PartialsModal :show="showDeleteModal" @close="showDeleteModal = false">
         <div class="p-6 text-center">
             <svg class="mx-auto mb-4 w-14 h-14 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <h3 class="mb-5 text-lg font-normal text-gray-800">Realmente querés eliminar tu publicación?</h3>
+            <h3 class="mb-5 text-lg font-normal text-gray-800">¿Realmente querés eliminar tu publicación?</h3>
             <button @click="destroy(vehicleSelected); showDeleteModal = false" data-modal-toggle="delete_modal" type="button" class="mb-2 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                 Si, estoy seguro
             </button>
@@ -95,7 +95,6 @@ export default {
     },
     methods:{
         destroy(v){
-            console.log(v.slug)
             this.$axios.$delete(`vehicle/${v.slug}`)
                 .then(res => {
                     this.vehicles = res

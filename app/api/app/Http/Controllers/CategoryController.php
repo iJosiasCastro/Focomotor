@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Fuel;
 use App\Models\State;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
@@ -39,6 +40,10 @@ class CategoryController extends Controller
     public function states(){
         $states = State::all();
         return $states;
+    }
+
+    public function fuels(){
+        return Fuel::all();
     }
 
     public function cities($id){

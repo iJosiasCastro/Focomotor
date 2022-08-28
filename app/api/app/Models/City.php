@@ -31,8 +31,8 @@ class City extends Model
     public function cityable(){
         return $this->morphTo();
     }
-    
-    // public function state(){
-    //     return $this->belongsTo(State::class);
-    // }
+
+    public function users(){
+        return $this->hasMany(User::class); 
+    }
 }

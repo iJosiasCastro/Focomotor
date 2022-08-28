@@ -35,4 +35,8 @@ class District extends Model
         return $this->morphMany(City::class, 'cityable');
     }
 
+    public function users(){
+        return $this->hasMany(User::class);
+    }
+
 }

@@ -39,4 +39,8 @@ class State extends Model
         return $this->morphMany(City::class, 'cityable');
     }
 
+    public function vehicles(){
+        return $this->hasMany(Vehicle::class);
+    }
+
 }

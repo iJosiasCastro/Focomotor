@@ -97,11 +97,11 @@ export default {
           path: '/planes/:slug',
           component: resolve(__dirname, 'views/plan/show.vue')
         },
-
+        
         {
           path: '/vehiculos',
           redirect: '/listado',
-        }
+        },
       
       ]
     }
