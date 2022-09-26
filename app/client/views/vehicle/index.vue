@@ -5,6 +5,7 @@
         <VehicleCard v-for="(v,i) in vehicles" :key="i" :vehicle="v"/>
 
     </VehicleIndexFilters>
+    
       
     <!-- <div class="hidden">
       <NuxtLink v-if="page.prev" :to="{name: 'vehicle.index', query: {page: page.current-1} }">Anterior</NuxtLink>
@@ -18,13 +19,26 @@
 export default {
   head(){
       return {
-          title: 'Vehículos - Focomotor'
+          title: 'Vehículos - Focomotor',
+          scripts: [
+            { hid: 'adsense', src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', defer: true, 'data-ad-client': 'ca-pub-5902667990414861' },
+          ]
       }
+  },
+  mounted(){
+    this.$nextTick(() => {
+      try {
+        // this is required for each ad slot (calling this once will only load 1 ad)
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
+      } catch (error) {
+        console.error(error)
+      }
+    })
   },
   async asyncData({ $axios, query }){
     const {prev_page_url, next_page_url, current_page, links, data} = await $axios.$get('vehicles?'+ new URLSearchParams(query).toString())
     const categories = await $axios.$get('categories')
-    const cities = await $axios.$get('filter/cities/1')
+    const cities = await $axios.$get('filter/allCities')
     const fuels = await $axios.$get('fuels')
     var brands = []
     var models = []

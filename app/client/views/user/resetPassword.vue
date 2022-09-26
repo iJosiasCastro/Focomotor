@@ -119,6 +119,7 @@ export default {
           this.user.email = ''
           this.error = null
           this.message = res.message
+          console.log(res)
         })
         .catch((err)=>{
           // console.log(err)

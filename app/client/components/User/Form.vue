@@ -158,7 +158,7 @@ export default {
             this.reset(['cities', 'districts'])
 
             if(e){
-                const state = await this.$axios.$get(`states/${e}`)
+                const state = await this.$axios.$get(`cities/${e}`)
                 if(state.type == 'cities'){
                     this.data.cities = state.data
                 }else if(state.type == 'districts'){

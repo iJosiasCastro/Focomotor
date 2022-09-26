@@ -137,7 +137,6 @@ class AuthController extends Controller
         if (empty($user)) {
             return response()->json(['message'=>'No existe una cuenta registrada con ese correo'], 406);
         }
-        
         $token = [
             'email' => $request->email,
             'token' => Str::random(60),
@@ -146,8 +145,10 @@ class AuthController extends Controller
         DB::table('password_resets')->insert($token);
 
         $email = new ResetPasswordMailable($user, $token);
-        Mail::to($user['email'])->send($email);
+        Mail::to($user->email)->send($email);
         return response(['message'=>'Se envió el correo de recuperación, revisá tu email para continuar']);
+    
+        
     }
 
 

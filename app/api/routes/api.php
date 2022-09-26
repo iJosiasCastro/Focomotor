@@ -72,9 +72,11 @@ Route::group([
 ], function(){
     Route::get('states', [FilterController::class, 'states']);
     Route::get('cities/{stateId}', [FilterController::class, 'cities']);
+    
+    Route::get('brands/{categorySlug}', [FilterController::class, 'brands']);
+    Route::get('models/{categorySlug}/{brandSlug}', [FilterController::class, 'models']);
 
-    Route::get('brands/{categoryId}', [FilterController::class, 'brands']);
-    Route::get('models/{categoryId}/{brandId}', [FilterController::class, 'models']);
+    Route::get('allCities', [FilterController::class, 'allCities']);
 });
 
 

@@ -56,7 +56,15 @@
             </div>
 
             <VehicleIndexPagination :vehicles="vehicles" :query="query" :page="page" />
-            
+
+            <!-- Listado -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5902667990414861"
+                data-ad-slot="6184467807"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+
         </div>
     </section>
 

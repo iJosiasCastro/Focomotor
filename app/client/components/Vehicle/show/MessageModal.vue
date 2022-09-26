@@ -68,7 +68,7 @@ export default {
     methods:{
         submit(){
             this.sending = true
-            this.$axios.post(`email/vehicle/${this.vehicleSlug}/message`, this.form)
+            this.$axios.post(`email/vehicle/${this.vehicleSlug}`, this.form)
                 .then(res => {
                     // console.log(res)
                     window.scrollTo(0, 0)

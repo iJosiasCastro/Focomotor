@@ -21,3 +21,9 @@
 .text-shadow {
     text-shadow: 2px 2px 5px #666;
 }
+
+@media (min-width:768px){
+    .max-h-0{
+        max-height: 0px;
+    }
+}

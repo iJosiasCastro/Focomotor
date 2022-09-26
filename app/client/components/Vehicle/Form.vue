@@ -166,7 +166,7 @@ export default {
             const e = this.vehicle.state_id
             
             if(e){
-                this.data.cities = await this.$axios.$get(`states/${e}`)
+                this.data.cities = await this.$axios.$get(`cities/${e}`)
             }else{
                 this.data.cities = []
             }
@@ -202,7 +202,7 @@ export default {
             const vehicle = Object.fromEntries(Object.entries(this.vehicle).filter(([k, v]) => v !== ''))
             this.$axios[method](url, vehicle)
                 .then(res => {
-                    console.log(vehicle)
+                    // console.log(vehicle)
                     this.$router.push({name:'user.dashboard'})
                 })
                 .catch(err => {

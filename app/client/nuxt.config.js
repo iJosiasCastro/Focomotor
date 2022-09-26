@@ -49,7 +49,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
   ],
 
 
@@ -67,9 +67,9 @@ export default {
   },
 
   proxy: {
-    '/api/': process.env.APP_URL+'api/',
+    '/api/': process.env.APP_URL+'api/',  
     '/laravel': {
-      target: 'https://laravel-auth.nuxtjs.app',
+      target: 'https://api.focomotor.com.ar/',
       pathRewrite: { '^/laravel': '/' }
     }
   },

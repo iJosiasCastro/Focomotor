@@ -113,33 +113,31 @@ class FilterController extends Controller
         return $models;
     }
 
-    // public function allCities(){
-    //     $users = User::whereHas('vehicles')->get();
+    public function allCities(){
+        $users = User::whereHas('vehicles')->get();
         
-    //     $cities = [];
-    //     foreach ($users as $user) {
-    //         $find = false;
-    //         foreach($cities as $city){
-    //             if($city['slug'] == $user->city['slug']){
-    //                 $find = true;
-    //             }
-    //         }
-    //         // No add duplicates cities
-    //         if(!$find){
-    //             array_push($cities, [
-    //                 'name' => $user->city['name'],
-    //                 'slug' => $user->city['slug']
-    //             ]);
-    //         }
-    //     }
+        $cities = [];
+        foreach ($users as $user) {
+            $find = false;
+            foreach($cities as $city){
+                if($city['slug'] == $user->city['slug']){
+                    $find = true;
+                }
+            }
+            // No add duplicates cities
+            if(!$find){
+                array_push($cities, [
+                    'name' => $user->city['name'],
+                    'slug' => $user->city['slug']
+                ]);
+            }
+        }
 
-    //     usort($cities, function($a, $b) {
-    //         return $a['name'] > $b['name'];
-    //     });
+        usort($cities, function($a, $b) {
+            return $a['name'] > $b['name'];
+        });
 
-
-
-    //     return $cities;
-    // }
+        return $cities;
+    }
 
 }

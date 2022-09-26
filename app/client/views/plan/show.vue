@@ -6,7 +6,7 @@
         <div class="h-5 md:h-8"></div>
 
         <div v-if="message" class="max-w-md text-lg mb-10 mx-auto">
-            <PartialsSubtitle subtitle="¡Gracias! Te enviaremos un link de pago a tu email con tu plan elegido. Al acreditarse tu abono, recibirás usuario y contraseña para comenzar a publicar en Focomotor." />
+            <PartialsSubtitle subtitle="¡Gracias! Te enviaremos un link de pago. Al acreditar tu suscripción, habilitaremos tu cuenta de email con el plan elegido." />
             <div class="h-6"></div>
             <NuxtLink :to="{ name:'home' }" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded-lg text-white transition-opacity">
                 Volver a navegar

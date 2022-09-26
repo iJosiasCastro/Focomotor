@@ -328,7 +328,7 @@
                                                                     style="Margin:0;padding-top:15px;padding-bottom:0px;padding-left:20px;padding-right:20px">
                                                                     <p
                                                                         style="padding-bottom:50px;Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:28px;color:#2D2D2D;font-size:21px">
-                                                                        Hola {{$user['name']}}, hemos recibido una solicitud para restablecer la contraseña de tu cuenta de Focomotor.
+                                                                        Hola {{$user->name}}, hemos recibido una solicitud para restablecer la contraseña de tu cuenta de Focomotor.
                                                                     </p>
 
                                                                     <div style="font-size:16px">
@@ -341,7 +341,7 @@
                                                             <tr>
                                                                 <td align="center" style="padding:0;Margin:0;margin-top:0px;padding-bottom:30px">
                                                                     <span style="border-style:solid;border-color:#2cb543;background:#007cff;border-width:0px;display:inline-block;border-radius:7px;width:auto">
-                                                                        <a href="{{env('CLIENT_URL').'restablecer?token='.$token .'&email='.$user['email'] }}" style="text-decoration:none;color:#ffffff;font-size:18px;border-style:solid;border-color:#007cff;border-width:10px 20px;display:inline-block;background:#007cff;border-radius:7px;font-family:arial,'helvetica neue',helvetica,sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://focomotor.com.ar/cuenta&amp;source=gmail&amp;ust=1657738021368000&amp;usg=AOvVaw2p36WjhG9XMHc9lgeOKiW3">
+                                                                        <a href="{{env('CLIENT_URL').'restablecer?token='.$token['token'] .'&email='.$user->email }}" style="text-decoration:none;color:#ffffff;font-size:18px;border-style:solid;border-color:#007cff;border-width:10px 20px;display:inline-block;background:#007cff;border-radius:7px;font-family:arial,'helvetica neue',helvetica,sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://focomotor.com.ar/cuenta&amp;source=gmail&amp;ust=1657738021368000&amp;usg=AOvVaw2p36WjhG9XMHc9lgeOKiW3">
                                                                             Restablecer la contraseña
                                                                         </a>
                                                                     </span>
