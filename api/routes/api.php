@@ -71,7 +71,7 @@ Route::group([
     'prefix' => 'filter'
 ], function(){
     Route::get('states', [FilterController::class, 'states']);
-    Route::get('cities/{stateId}', [FilterController::class, 'cities']);
+    Route::get('cities/{stateSlug}', [FilterController::class, 'cities']);
     
     Route::get('brands/{categorySlug}', [FilterController::class, 'brands']);
     Route::get('models/{categorySlug}/{brandSlug}', [FilterController::class, 'models']);

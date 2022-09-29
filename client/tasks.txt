@@ -1,7 +1,9 @@
-Añadir a filtros la posibilidad de filtrar por
-provincia->estado->ciudad
-
-Filtrar por marca->categorias
-
-Mejorar buscador -> incluir marca y modelo
-Añadir perfil de administrador (Permitir editar cada vehículo)
+Asunto: Ubicación
+Acción: Modificar ubicaciones:
+Capital Federal
+Bs As Gba Norte
+Bs Así Gba Oeste
+Bs As Gba Sur
+Buenos Aires Interior 
+Anexo: ver si no quiere filtrar como elige: Todas
+_

@@ -1,6 +1,6 @@
 <template>
 <App>
-    <VehicleIndexFilters :categories="categories" :brands="brands" :models="models" :cities="cities" :fuels="fuels" :page="page" :query="query" :vehicles="vehicles">
+    <VehicleIndexFilters :categories="categories" :states="states" :brands="brands" :models="models" :cities="cities" :fuels="fuels" :page="page" :query="query" :vehicles="vehicles">
 
         <VehicleCard v-for="(v,i) in vehicles" :key="i" :vehicle="v"/>
 
@@ -38,25 +38,32 @@ export default {
   async asyncData({ $axios, query }){
     const {prev_page_url, next_page_url, current_page, links, data} = await $axios.$get('vehicles?'+ new URLSearchParams(query).toString())
     const categories = await $axios.$get('categories')
-    const cities = await $axios.$get('filter/allCities')
+    const states = await $axios.$get('filter/states')
     const fuels = await $axios.$get('fuels')
     var brands = []
+    var cities = []
     var models = []
 
     if(query.category){
       brands = await $axios.$get(`filter/brands/${query.category}`)
     }
+
     
     if(query.brand){
       models = await $axios.$get(`filter/models/${query.category}/${query.brand}`)
     }
 
+    if(query.state){
+      cities = await $axios.$get(`filter/cities/${query.state}`)
+    }
+
     return {
       query,
       categories,
+      states,
+      cities,
       brands,
       models,
-      cities,
       fuels,
       vehicles: data,
       

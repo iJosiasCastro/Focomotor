@@ -29,12 +29,11 @@ class FilterController extends Controller
         return $states;
     }
 
-    public function cities($stateId){
-        $state = State::findOrFail($stateId);
+    public function cities($stateSlug){
+        $state = State::where('slug', '=', $stateSlug)->first();
 
         $cities = [];
         $districts = [];
-
         if(count($state->cities)){
             $allCities = $state->cities()->orderBy('name')->get();
             foreach ($allCities as $city) {
@@ -59,11 +58,11 @@ class FilterController extends Controller
                     $find = false;
                     foreach($city->users as $user){
                         if(!$find && count($user->vehicles)){
+                            $find = true;
                             array_push($cities, ["id"=> $city->id, "name" => $city->name, "slug" => $city->slug]);
                         }
                     }
                 }
-
                 // If the district has cities, push them
                 if(count($cities)){
                     array_push($districts, [

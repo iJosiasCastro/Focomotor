@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\Fuel;
 use App\Models\Model;
+use App\Models\State;
 use App\Models\User;
 use App\Models\Vehicle;
 use GuzzleHttp\Psr7\Request;
@@ -55,6 +56,7 @@ class VehicleController extends Controller
             ["name" => "price_min", "type" => "range_min"],
             ["name" => "price_max", "type" => "range_max"],
 
+            ["name" => "state", "type" => "slug"],
             ["name" => "city", "type" => "slug"],
 
             ["name" => "year_min", "type" => "range_min"],
@@ -79,6 +81,8 @@ class VehicleController extends Controller
                     $model = Category::where('slug', '=', $value)->first();
                 }else if($name == 'city'){
                     $model = City::where('slug', '=', $value)->first();
+                }else if($name == 'state'){
+                    $model = State::where('slug', '=', $value)->first();
                 }else if($name == 'fuel'){
                     $model = Fuel::where('slug', '=', $value)->first();
                 }else if($name == 'brand'){
@@ -93,6 +97,12 @@ class VehicleController extends Controller
                         $value = request()['city'];
                         $model = City::where('slug', '=', $value)->first();
                         $query->where('city_id', '=', $model->id);
+                    });
+                }elseif($name == 'state'){
+                    $vehicles = $vehicles->whereHas('user', function ($query) {
+                        $value = request()['state'];
+                        $model = State::where('slug', '=', $value)->first();
+                        $query->where('state_id', '=', $model->id);
                     });
                 }else{
                     $vehicles = $vehicles = $vehicles->where($name.'_id', '=', $model);
