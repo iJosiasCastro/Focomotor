@@ -55,6 +55,12 @@ export default {
 
     if(query.state){
       cities = await $axios.$get(`filter/cities/${query.state}`)
+      var citiesMap = []
+      cities.data.forEach((e)=>{
+        citiesMap.push(e)
+      })
+
+      cities = citiesMap
     }
 
     return {

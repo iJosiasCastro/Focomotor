@@ -46,7 +46,7 @@
                 <div class="h-6"></div>
                 <VehicleIndexFilterMileage :query="query" />
                 <div class="h-6"></div>
-                <VehicleIndexFilterStates :query="query" :states="states" />
+                <VehicleIndexFilterStates v-if="!query.state" :query="query" :states="states" />
                 <div class="h-6"></div>
 
                 
