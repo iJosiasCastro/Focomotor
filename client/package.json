@@ -24,6 +24,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
     "node-sass": "^7.0.1"
   }
 }

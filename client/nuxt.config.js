@@ -42,6 +42,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     'vue-ssr-carousel/nuxt',
+    '@nuxtjs/pwa',
   ],
   
 
@@ -51,6 +52,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
+
+  pwa: {
+    manifest: {
+      name: 'Focomotor',
+      short_name: 'Focomotor',
+      description: 'Tu lugar para comprar y vender vehículos',
+      lang: 'es',
+      useWebmanifestExtension: false
+    },
+    icon: {
+      purpose: 'maskable'
+    }
+  },
 
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
