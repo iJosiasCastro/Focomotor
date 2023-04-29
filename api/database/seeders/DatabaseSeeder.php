@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Storage::deleteDirectory('vehicles');
-        // Storage::makeDirectory('vehicles');
+        Storage::deleteDirectory('vehicles');
+        Storage::makeDirectory('vehicles');
 
         $this->call(RoleSeeder::class);
 
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(WordpressSeeder::class);
 
-        // $this->call(UserSeeder::class);
-        // $this->call(VehicleSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(VehicleSeeder::class);
     }
 }
