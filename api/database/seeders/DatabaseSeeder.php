@@ -23,9 +23,10 @@ class DatabaseSeeder extends Seeder
         $this->call(FuelSeeder::class);
         $this->call(LocationSeeder::class);
         $this->call(CategorySeeder::class);
-        $this->call(WordpressSeeder::class);
 
         $this->call(UserSeeder::class);
         $this->call(VehicleSeeder::class);
+
+        $this->call(WordpressSeeder::class);
     }
 }

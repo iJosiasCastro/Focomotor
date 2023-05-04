@@ -2,6 +2,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+button:focus {
+    outline: none;
+}
+
 .bg-primary {
     background-color: #077CFF;
 }

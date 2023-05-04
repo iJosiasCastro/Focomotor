@@ -5,7 +5,7 @@
 ### install dependencies
 composer install
 
-### serve with hot reload at 192.168.0.186
+### serve at 192.168.0.186
 php artisan serve --port=8080 --host=192.168.0.186
 
 
@@ -27,6 +27,11 @@ php artisan db:seed --class=DatabaseResetSeeder
 
 # Storage link
 php artisan storage:link
+
+cd public
+mklink /D storage C:\www\focomotor\api\storage\app
+
+# Dirs error
 mkdir -p storage/framework/sessions
 mkdir -p storage/framework/views
 mkdir -p storage/framework/cache/data
@@ -37,6 +42,7 @@ php artisan cache:clear
 
 # Dependencies
 composer require tymon/jwt-auth
+php artisan jwt:secret
 
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

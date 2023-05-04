@@ -51,7 +51,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    '@nuxtjs/moment'
   ],
+
+  moment: {
+    timezone: true
+  },
 
   pwa: {
     manifest: {
@@ -83,7 +88,8 @@ export default {
   proxy: {
     '/api/': process.env.APP_URL+'api/',  
     '/laravel': {
-      target: 'https://api.focomotor.com.ar/',
+      target: 'http://192.168.0.186:8080/',
+      // target: 'https://.focomotor.com.ar/',
       pathRewrite: { '^/laravel': '/' }
     }
   },
@@ -92,8 +98,8 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        url: 'https://api.focomotor.com.ar',
-        // url: 'http://192.168.0.186:8080',
+        // url:  'https://api.focomotor.com.ar',
+        url: 'http://192.168.0.186:8080',
         token: {
           property: 'access_token',
           maxAge: 60 * 60
@@ -114,6 +120,7 @@ export default {
   build: {
   },
   server: {
+      port: 8000,
       host: "0.0.0.0"
   },
 

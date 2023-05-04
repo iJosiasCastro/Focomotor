@@ -276,15 +276,12 @@ class VehicleController extends Controller
                 // Upload
                 Storage::put('vehicles/large/'.$imageName, base64_decode($image));
 
-
-
                 // Image::make(base64_decode($image))->save('storage/vehicles/example/'.$imageName);
                 
                 // Upload thumbnail
                 $img = Image::make('storage/vehicles/large/'.$imageName)
                 ->resize(300, null, function($c){$c->aspectRatio();});
                 // ->save('storage/vehicles/thumbnail/'.$imageName);
-                // Storage::put('storage/vehicles/thumbnail/'.$imageName, $img->stream());
                 Storage::put('vehicles/thumbnail/'.$imageName, $img->stream());
 
 

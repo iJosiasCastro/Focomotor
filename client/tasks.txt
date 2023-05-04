@@ -1,9 +1,16 @@
-Asunto: Ubicación
-Acción: Modificar ubicaciones:
-Capital Federal
-Bs As Gba Norte
-Bs Así Gba Oeste
-Bs As Gba Sur
-Buenos Aires Interior 
-Anexo: ver si no quiere filtrar como elige: Todas
-_
+Done:
+    Corregir outline de botones
+    Agregar la fecha de publicacion, en cada publicacion
+    Corregir nombre a "Villa Devoto"
+    Agregar signos de puntuacion al formulario de vehiculo
+    Agregar signos de puntuacion al los filtros
+
+To do:
+    Corregir aplicacion android
+
+    Agregar filtros:
+    Concecionaria
+    Particular
+
+
+    Crear cron para que a un año de publicado, se elimina la publicacion (solo a cuentas de particulares)

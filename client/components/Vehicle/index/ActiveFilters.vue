@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button v-for="(v,k) in $store.getters.notEmpty({...query, orderBy:null,page:null})" :key="k" class="focus:outline-none mr-1">
+        <button v-for="(v,k) in $store.getters.notEmpty({...query, orderBy:null,page:null})" :key="k" class="mr-1">
             <NuxtLink :to="{name:'vehicle.index', query: $store.getters.notEmpty({ ...query, [k]:null , page:null}) }" class="bg-primary hover:opacity-75 text-white text-xs font-semibold items-center inline-flex h-5 px-2.5 py-0.5 rounded">
                 {{ show(v,k) }}
                 <div class="text-white ml-1 my-auto h-4 rounded-lg text-sm">

@@ -114,9 +114,9 @@ Route::group(['middleware' => ['web']], function(){
 });
 
 Route::get('test', function(){
-    // $img = Image::make('storage/vehicles/large/271f70ae04b86dbebf4e5f642d78d972eglv8F669u.jpeg')
-    // ->resize(300, null, function($c){$c->aspectRatio();});
-    // Storage::put('vehicles/test.jpeg', $img->stream());
+    $img = Image::make('storage/vehicles/large/44d46e643ccf65df73b3d792d332ba233yboJNK87K.jpeg')
+    ->resize(300, null, function($c){$c->aspectRatio();});
+    Storage::put('vehicles/test.jpeg', $img->stream());
 
-    // return $img->response('jpg');
+    return $img->response('jpg');
 });
