@@ -58,11 +58,11 @@ export default {
   data(){
     return {
         plans: [
-            {name: 'x4 Publicaciones', class: 'md:col-span-4', price: 1000, vehicles: 4},
-            {name: 'x10 Publicaciones', class: 'md:col-span-4', price: 2000, vehicles: 10},
-            {name: 'x20 Publicaciones', class: 'md:col-span-4', price: 3000, vehicles: 20},
-            {name: 'x50 Publicaciones', class: 'md:col-span-4', price: 6000, vehicles: 50},
-            {name: 'x100 Publicaciones', class: 'md:col-span-4', price: 9000, vehicles: 100},
+            {name: 'x4 Publicaciones', class: 'md:col-span-4', price: '2.000', vehicles: 4},
+            {name: 'x10 Publicaciones', class: 'md:col-span-4', price: '4.000', vehicles: 10},
+            {name: 'x20 Publicaciones', class: 'md:col-span-4', price: '6.000', vehicles: 20},
+            {name: 'x50 Publicaciones', class: 'md:col-span-4', price: '9.000', vehicles: 50},
+            {name: 'x100 Publicaciones', class: 'md:col-span-4', price: '15.000', vehicles: 100},
         ]
     }
   }
