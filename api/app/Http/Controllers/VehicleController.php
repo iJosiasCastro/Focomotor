@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\Fuel;
 use App\Models\Model;
+use App\Models\Role;
 use App\Models\State;
 use App\Models\User;
 use App\Models\Vehicle;
@@ -51,6 +52,8 @@ class VehicleController extends Controller
             ["name" => "brand", "type" => "slug"],
             ["name" => "model", "type" => "slug"],
 
+            ["name" => "seller", "type" => "slug"],
+
             ["name" => "fuel", "type" => "slug"],
 
             ["name" => "price_min", "type" => "range_min"],
@@ -89,6 +92,8 @@ class VehicleController extends Controller
                     $model = Brand::where('slug', '=', $value)->first();
                 }else if($name == 'model'){
                     $model = Model::where('slug', '=', $value)->first();
+                }else{
+                    $model = null;
                 }
                 
                 $model = $model ? $model->id : 0;
@@ -103,6 +108,21 @@ class VehicleController extends Controller
                         $value = request()['state'];
                         $model = State::where('slug', '=', $value)->first();
                         $query->where('state_id', '=', $model->id);
+                    });
+                }elseif($name == 'seller'){
+                    $vehicles = $vehicles->whereHas('user', function ($query) {
+                        info('SELLER');
+                        $value = request()['seller'];
+                        $model = Role::where('name', '=', 'Particular')->first();
+                        info($value);
+                        info($model);
+                        if($value == 'particular'){
+                            info('PARTICULAR');
+                            $query->where('role_id', '=', $model->id);
+                        }else{
+                            info('NO PARTICULAR');
+                            $query->where('role_id', '!=', $model->id);
+                        }
                     });
                 }else{
                     $vehicles = $vehicles = $vehicles->where($name.'_id', '=', $model);
