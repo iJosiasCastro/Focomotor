@@ -129,6 +129,7 @@ export default {
 
   router: {
     ...routes,
+    middleware: 'redirectStandalone'
     
   },
   
