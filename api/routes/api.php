@@ -6,7 +6,10 @@ use App\Http\Controllers\FilterController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\VehicleController;
+use App\Mail\ExpiredVehicleNotification;
+use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
@@ -120,4 +123,27 @@ Route::get('test', function(){
     Storage::put('vehicles/test.jpeg', $img->stream());
 
     return $img->response('jpg');
+});
+
+Route::get('delete-exipired-vehicles', function(){
+    $expiredVehicles = Vehicle::whereDate('created_at', '<=', now()->subYear())
+        ->with('user')
+        ->whereHas('user', function ($query) {
+            $query->where('role_id', 1);
+        })
+        ->get();
+
+
+    foreach ($expiredVehicles as $vehicle) {
+
+        $vehicle->delete();
+
+        Mail::to($vehicle->user->email)->send(new ExpiredVehicleNotification([
+            "title" => $vehicle->title,
+            "name" => $vehicle->user->name
+        ]));
+
+    }
+
+    return 'Expired vehicles deleted successfully.';
 });

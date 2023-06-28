@@ -1,13 +1,3 @@
 To do:
-    Corregir aplicacion android
 
-    Agregar filtros:
-    Concecionaria
-    Particular
-
-    Crear cron para que a un año de publicado, se elimina la publicacion (solo a cuentas de particulares)
-
-Utilizar git en servidor
-Asunto: Editado
-Acción: cuando un usuario modifica algún contenido de alguna publicación, reemplazar la fecha original por Editado el ( ahí va la fecha actual de la modificación)
-Anexo: -
+Crear cron para que a un año de publicado, se elimina la publicacion (solo a cuentas de particulares)

@@ -44,5 +44,10 @@ php artisan cache:clear
 composer require tymon/jwt-auth
 php artisan jwt:secret
 
+# Cron Jobs
+php artisan schedule:run
+php artisan vehicles:delete-expired 
+curl https://api.focomotor.com.ar/api/delete-exipired-vehicles
+
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
