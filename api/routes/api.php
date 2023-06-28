@@ -114,7 +114,8 @@ Route::group(['middleware' => ['web']], function(){
 });
 
 Route::get('test', function(){
-    $img = Image::make('storage/vehicles/large/44d46e643ccf65df73b3d792d332ba233yboJNK87K.jpeg')
+    $img = Image::make('https://images.pexels.com/photos/895259/pexels-photo-895259.jpeg?auto=compress&cs=tinysrgb&w=600')
+    // $img = Image::make('storage/vehicles/large/6eed623ff0732d0d545592a8fcdbdd85eWM1G3VSY2.jpeg')
     ->resize(300, null, function($c){$c->aspectRatio();});
     Storage::put('vehicles/test.jpeg', $img->stream());
 

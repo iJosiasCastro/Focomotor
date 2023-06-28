@@ -293,16 +293,13 @@ class VehicleController extends Controller
                 $image = str_replace(' ', '+', $image); 
                 $imageName = md5(microtime()).Str::random(10).'.'.$extension;
 
-                // Upload
-                Storage::put('vehicles/large/'.$imageName, base64_decode($image));
+                // Upload image
+                Storage::put('public/vehicles/large/'.$imageName, base64_decode($image));
 
-                // Image::make(base64_decode($image))->save('storage/vehicles/example/'.$imageName);
-                
-                // Upload thumbnail
+                // Generate and upload thumbnail
                 $img = Image::make('storage/vehicles/large/'.$imageName)
                 ->resize(300, null, function($c){$c->aspectRatio();});
-                // ->save('storage/vehicles/thumbnail/'.$imageName);
-                Storage::put('vehicles/thumbnail/'.$imageName, $img->stream());
+                Storage::put('public/vehicles/thumbnail/'.$imageName, $img->stream());
 
 
             }else{
