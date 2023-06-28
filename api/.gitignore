@@ -2,6 +2,9 @@
 /public/hot
 /public/storage
 /storage/app/public
+/framework/sessions
+/framework/views
+/framework/cache
 /vendor
 .env
 .env.backup

@@ -88,7 +88,7 @@ export default {
   proxy: {
     '/api/': process.env.APP_URL+'api/',  
     '/laravel': {
-      target: 'http://192.168.0.186:8080/',
+      target: 'http://192.168.0.186/',
       // target: 'https://.focomotor.com.ar/',
       pathRewrite: { '^/laravel': '/' }
     }
