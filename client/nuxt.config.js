@@ -88,8 +88,8 @@ export default {
   proxy: {
     '/api/': process.env.APP_URL+'api/',  
     '/laravel': {
-      target: 'http://192.168.0.186/',
-      // target: 'https://.focomotor.com.ar/',
+      target: 'https://api.focomotor.com.ar/',
+      // target: 'http://192.168.0.186/',
       pathRewrite: { '^/laravel': '/' }
     }
   },
@@ -98,8 +98,8 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        // url:  'https://api.focomotor.com.ar',
-        url: 'http://192.168.0.186:8080',
+        url:  'https://api.focomotor.com.ar',
+        // url: 'http://192.168.0.186:8080',
         token: {
           property: 'access_token',
           maxAge: 60 * 60
@@ -119,9 +119,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+  // server: {
+  //     port: 8000,
+  //     host: "0.0.0.0"
+  // },
   server: {
-      port: 8000,
-      host: "0.0.0.0"
+    port: 3000
   },
 
   router: {
