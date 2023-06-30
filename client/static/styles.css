@@ -26,8 +26,24 @@ button:focus {
     text-shadow: 2px 2px 5px #666;
 }
 
+
 @media (min-width:768px){
     .max-h-0{
         max-height: 0px;
+    }
+}
+
+@media (max-width:768px){
+    a, button {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    a, button:focus {
+        outline: none !important;
     }
 }
