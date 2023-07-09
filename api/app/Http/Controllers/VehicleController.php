@@ -189,7 +189,7 @@ class VehicleController extends Controller
 
     public function update(VehicleRequest $request, Vehicle $vehicle){
         // $this->authorize('user_id', $vehicle);
-        if($vehicle->user_id == Auth::id() || Auth::id() == 610){
+        if($vehicle->user_id == Auth::id() || Auth::id() == env('SUPER_ADMIN_ID')){
             $this->image_update($request->images, $vehicle);
             $vehicle->update($request->all());
         }else{
@@ -198,7 +198,7 @@ class VehicleController extends Controller
     }
 
     public function destroy(Vehicle $vehicle){
-        if($vehicle->user_id == Auth::id() || Auth::id() == 610){
+        if($vehicle->user_id == Auth::id() || Auth::id() == env('SUPER_ADMIN_ID')){
             foreach ($vehicle->images as $image) {
                 $this->image_delete($image);
             }
