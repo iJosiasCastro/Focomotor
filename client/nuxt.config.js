@@ -64,7 +64,9 @@ export default {
       short_name: 'Focomotor',
       description: 'Tu lugar para comprar y vender vehículos',
       lang: 'es',
-      useWebmanifestExtension: false
+      useWebmanifestExtension: false,
+      start_url: '/',
+      display: 'fullscreen'
     },
     icon: {
       purpose: 'maskable'
