@@ -35,7 +35,7 @@ export default {
             years: [
                 {min: null, max: 2000, text: 'Hasta 2000'},
                 {min: 2000, max: 2010, text: 'De 2000 a 2010'},
-                {min: 2015, max: 2020, text: 'De 2015 a 2020'},
+                {min: 2010, max: 2020, text: 'De 2010 a 2020'},
                 {min: 2020, max: null, text: 'Desde 2020'},
             ]
         }

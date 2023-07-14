@@ -9,9 +9,16 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+      
       gtag('config', 'UA-180024160-1');
-    </script>
+      </script>
+      <script>
+        caches.keys().then(cacheNames => {
+          cacheNames.forEach(cacheName => {
+            caches.delete(cacheName);
+          });
+        });
+      </script>
     {{ HEAD }}
   </head>
   <body {{ BODY_ATTRS }}>

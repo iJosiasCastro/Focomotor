@@ -46,16 +46,13 @@ export default {
     methods: {
         formatNumber(value) {
             value = value.replace(/[^0-9]+/g, "");
-            console.log(this.format)
             if(this.format){
                 value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
             }
             return value;
         },
         handleInput(e) {
-            console.log('test')
             var value = e.target.value;
-            console.log(value)
             if (value) {
                 value = this.formatNumber(value);
                 document.getElementById(this.id).value = value;
