@@ -29,7 +29,10 @@ php artisan db:seed --class=DatabaseResetSeeder
 php artisan storage:link
 
 cd public
+# Windows:
 mklink /D storage C:\www\focomotor\api\storage\app
+# Linux:
+ln -s /home/focomotor-api/htdocs/api.focomotor.com.ar/storage/app storage
 
 # Dirs error
 mkdir -p storage/framework/sessions
