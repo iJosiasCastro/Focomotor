@@ -126,7 +126,7 @@ export default {
   //     host: "0.0.0.0"
   // },
   server: {
-    port: 3000
+    port: 3001
   },
 
   router: {
