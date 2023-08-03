@@ -10,6 +10,9 @@
             <div class="col-span-12 md:col-span-4 max-h-0">
                 <div class="md:bg-gray-200 md:border md:border-gray-400 md:border-solid md:p-4 md:rounded-lg md:shadow-lg">
                     <h1 class="text-xl md:text-2xl">{{data.vehicle.title}}</h1>
+                        
+                    <p class="text-sm text-gray-700" v-if="data.vehicle.created_at === data.vehicle.updated_at">Publicado {{formatDate(data.vehicle.created_at) }}</p>
+                    <p class="text-sm text-gray-700" v-else>Editado {{formatDate(data.vehicle.updated_at) }}</p>
                     <div class="h-3"></div>
                     <div class="flex">
                         <div class="bg-primary px-3 py-2 rounded-lg text-white transition-opacity font-bold">
@@ -167,6 +170,10 @@
 </template>
 
 <script>
+import moment from 'moment'
+import 'moment/locale/es'
+moment.locale('es')
+
 export default {
     head(){
         return {
@@ -192,6 +199,11 @@ export default {
                 return { data: res };
             })
             .catch(() => error({ status: 404 }));
+    },
+    methods: {
+        formatDate(date) {
+        return moment(date).fromNow()
+        }
     },
     data() {
         return {

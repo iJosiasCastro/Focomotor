@@ -1,9 +1,3 @@
-Asunto: Ubicación
-Acción: Modificar ubicaciones:
-Capital Federal
-Bs As Gba Norte
-Bs Así Gba Oeste
-Bs As Gba Sur
-Buenos Aires Interior 
-Anexo: ver si no quiere filtrar como elige: Todas
-_
+To do:
+
+Crear cron para que a un año de publicado, se elimina la publicacion (solo a cuentas de particulares)

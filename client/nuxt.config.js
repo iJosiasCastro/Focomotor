@@ -51,7 +51,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    '@nuxtjs/moment'
   ],
+
+  moment: {
+    timezone: true
+  },
 
   pwa: {
     manifest: {
@@ -59,7 +64,9 @@ export default {
       short_name: 'Focomotor',
       description: 'Tu lugar para comprar y vender vehículos',
       lang: 'es',
-      useWebmanifestExtension: false
+      useWebmanifestExtension: false,
+      start_url: '/',
+      display: 'fullscreen'
     },
     icon: {
       purpose: 'maskable'
@@ -84,6 +91,7 @@ export default {
     '/api/': process.env.APP_URL+'api/',  
     '/laravel': {
       target: 'https://api.focomotor.com.ar/',
+      // target: 'http://192.168.0.186/',
       pathRewrite: { '^/laravel': '/' }
     }
   },
@@ -92,7 +100,7 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        url: 'https://api.focomotor.com.ar',
+        url:  'https://api.focomotor.com.ar',
         // url: 'http://192.168.0.186:8080',
         token: {
           property: 'access_token',
@@ -113,12 +121,17 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+  // server: {
+  //     port: 8000,
+  //     host: "0.0.0.0"
+  // },
   server: {
-      host: "0.0.0.0"
+    port: 3001
   },
 
   router: {
     ...routes,
+    middleware: 'redirectStandalone'
     
   },
   

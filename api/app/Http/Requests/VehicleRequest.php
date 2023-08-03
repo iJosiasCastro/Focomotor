@@ -61,7 +61,7 @@ class VehicleRequest extends FormRequest
         $rules = [
             'title' => ['required', 'max:80'],
 
-            'price' => ['required', 'numeric', 'min:500', 'max:9999000'],
+            'price' => ['required', 'numeric', 'min:500', 'max:99999000'],
             'year' => ['required', 'numeric', 'min:1950', 'max:'.date("Y")],
             'mileage' => ['required', 'numeric', 'min:0','max:999000'],
             'description' => ['max:3000'],
