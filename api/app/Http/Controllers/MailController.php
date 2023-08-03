@@ -20,8 +20,8 @@ class MailController extends Controller
         ]);
 
         $email = new MessageMailable($request->all(), $vehicle);
-        Mail::to('marcelocastroarg@gmail.com')->send($email);
         Mail::to($vehicle->user['email'])->send($email);
+        Mail::to(env('ADMIN_MAIL'))->send($email);
         return 'Successful';
     }
 
@@ -34,8 +34,7 @@ class MailController extends Controller
         ]);
 
         $email = new ContactMailable($request->all());
-        Mail::to('josiascastro2003@gmail.com')->send($email);
-        Mail::to('marcelocastroarg@gmail.com')->send($email);
+        Mail::to(env('ADMIN_MAIL'))->send($email);
         return 'Successful';
     }
 
@@ -50,8 +49,7 @@ class MailController extends Controller
         ]);
 
         $email = new PlanMailable($request->all());
-        Mail::to('josiascastro2003@gmail.com')->send($email);
-        Mail::to('marcelocastroarg@gmail.com')->send($email);
+        Mail::to(env('ADMIN_MAIL'))->send($email);
         return 'Successful';
     }
 }

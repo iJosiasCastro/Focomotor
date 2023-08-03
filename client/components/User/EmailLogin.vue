@@ -11,7 +11,7 @@
     <div v-show="step==1">
 
         <div class="text-left">
-            <button @click="$emit('close')" class="focus:outline-none text-primary flex items-center">
+            <button @click="$emit('close')" class="text-primary flex items-center">
                 <i class="text-2xl fas fa-arrow-left mr-2"></i>
                 <span>
                 Atrás
@@ -33,7 +33,7 @@
     <!-- Register -->
     <div v-show="step==2 && userExist">
         <div class="text-left">
-            <button @click="step=1" class="focus:outline-none text-primary flex items-center">
+            <button @click="step=1" class="text-primary flex items-center">
                 <i class="text-2xl fas fa-arrow-left mr-2"></i>
                 <span>
                 {{user.email}}
@@ -69,7 +69,7 @@
     <!-- Login -->
     <div v-show="step==2 && !userExist">
         <div class="text-left">
-            <button @click="step=1" class="focus:outline-none text-primary flex items-center">
+            <button @click="step=1" class="text-primary flex items-center">
                 <i class="text-2xl fas fa-arrow-left mr-2"></i>
                 <span>
                 Atrás
@@ -132,7 +132,6 @@ export default {
     async checkUserExist(){
       this.$axios.$post('auth/exist', { email: this.user.email })
         .then(res => {
-          // console.log(res)
           if(res=='google'){
             window.location.href = this.$axios.defaults.baseURL+'google-login'
           }else{

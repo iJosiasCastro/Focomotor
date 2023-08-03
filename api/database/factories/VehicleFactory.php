@@ -21,7 +21,7 @@ class VehicleFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(),
-            'price' => $this->faker->numberBetween(5000, 9999000),
+            'price' => $this->faker->numberBetween(5000, 99999000),
             'year' => $this->faker->numberBetween(1950, 2022),
             'mileage' => $this->faker->numberBetween(0, 999000),
             'description' => $this->faker->text(2000),

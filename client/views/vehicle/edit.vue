@@ -8,7 +8,7 @@
             <VehicleForm :editable="v" :receivedData="data" />
         </div>
 
-        <div v-if="$store.state.auth.user.id == 610">
+        <div v-if="$store.state.auth.user.id == 23">
             <button @click="destroyAdmin" class="my-5 w-full bg-red-600 duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded-lg text-white transition-opacity">Eliminar vehículo</button>
         </div>
 

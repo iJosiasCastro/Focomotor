@@ -19,7 +19,6 @@
                     <div class="h-6"> </div>
                     <VehicleIndexFilterOrderByDropdown @closeOrderBy="showOrderByModal = false" :class="{'hidden' : !showOrderByModal}" v-click-outside="closeOrderByModal" :query="query" class="max-w-6xl mx-auto absolute -mt-4"  /> 
                 </div>
-                <!-- Cities -->
                 <div v-if="cities && !query.city && query.state">
                     <VehicleIndexFilterCities :query="query" :cities="cities" />
                     <div class="h-6"></div>
@@ -29,6 +28,12 @@
                     <VehicleIndexFilterCategories :query="query" :categories="categories" />
                     <div class="h-6"></div>
                 </div>
+
+                <div v-if="!query.seller">
+                    <VehicleIndexFilterSeller :query="query" />
+                    <div class="h-6"></div>
+                </div>
+
                 <div v-if="brands.length && !query.brand">
                     <VehicleIndexFilterBrands :query="query" :brands="brands" />
                     <div class="h-6"></div>

@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cmd/{command}', function($command){
-    Artisan::call($command);
-    dd(Artisan::output());
-});
+// Route::get('/cmd/{command}', function($command){
+//     Artisan::call($command);
+//     dd(Artisan::output());
+// });

@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\Fuel;
 use App\Models\Model;
+use App\Models\Role;
 use App\Models\State;
 use App\Models\User;
 use App\Models\Vehicle;
@@ -51,6 +52,8 @@ class VehicleController extends Controller
             ["name" => "brand", "type" => "slug"],
             ["name" => "model", "type" => "slug"],
 
+            ["name" => "seller", "type" => "slug"],
+
             ["name" => "fuel", "type" => "slug"],
 
             ["name" => "price_min", "type" => "range_min"],
@@ -89,6 +92,8 @@ class VehicleController extends Controller
                     $model = Brand::where('slug', '=', $value)->first();
                 }else if($name == 'model'){
                     $model = Model::where('slug', '=', $value)->first();
+                }else{
+                    $model = null;
                 }
                 
                 $model = $model ? $model->id : 0;
@@ -103,6 +108,21 @@ class VehicleController extends Controller
                         $value = request()['state'];
                         $model = State::where('slug', '=', $value)->first();
                         $query->where('state_id', '=', $model->id);
+                    });
+                }elseif($name == 'seller'){
+                    $vehicles = $vehicles->whereHas('user', function ($query) {
+                        info('SELLER');
+                        $value = request()['seller'];
+                        $model = Role::where('name', '=', 'Particular')->first();
+                        info($value);
+                        info($model);
+                        if($value == 'particular'){
+                            info('PARTICULAR');
+                            $query->where('role_id', '=', $model->id);
+                        }else{
+                            info('NO PARTICULAR');
+                            $query->where('role_id', '!=', $model->id);
+                        }
                     });
                 }else{
                     $vehicles = $vehicles = $vehicles->where($name.'_id', '=', $model);
@@ -169,7 +189,7 @@ class VehicleController extends Controller
 
     public function update(VehicleRequest $request, Vehicle $vehicle){
         // $this->authorize('user_id', $vehicle);
-        if($vehicle->user_id == Auth::id() || Auth::id() == 610){
+        if($vehicle->user_id == Auth::id() || Auth::id() == env('SUPER_ADMIN_ID')){
             $this->image_update($request->images, $vehicle);
             $vehicle->update($request->all());
         }else{
@@ -178,7 +198,7 @@ class VehicleController extends Controller
     }
 
     public function destroy(Vehicle $vehicle){
-        if($vehicle->user_id == Auth::id() || Auth::id() == 610){
+        if($vehicle->user_id == Auth::id() || Auth::id() == env('SUPER_ADMIN_ID')){
             foreach ($vehicle->images as $image) {
                 $this->image_delete($image);
             }
@@ -273,19 +293,13 @@ class VehicleController extends Controller
                 $image = str_replace(' ', '+', $image); 
                 $imageName = md5(microtime()).Str::random(10).'.'.$extension;
 
-                // Upload
-                Storage::put('vehicles/large/'.$imageName, base64_decode($image));
+                // Upload image
+                Storage::put('public/vehicles/large/'.$imageName, base64_decode($image));
 
-
-
-                // Image::make(base64_decode($image))->save('storage/vehicles/example/'.$imageName);
-                
-                // Upload thumbnail
+                // Generate and upload thumbnail
                 $img = Image::make('storage/vehicles/large/'.$imageName)
                 ->resize(300, null, function($c){$c->aspectRatio();});
-                // ->save('storage/vehicles/thumbnail/'.$imageName);
-                // Storage::put('storage/vehicles/thumbnail/'.$imageName, $img->stream());
-                Storage::put('vehicles/thumbnail/'.$imageName, $img->stream());
+                Storage::put('public/vehicles/thumbnail/'.$imageName, $img->stream());
 
 
             }else{
