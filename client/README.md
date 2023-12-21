@@ -1,3 +1,8 @@
+# npm
+npm install
+npm run dev
+npm run build
+
 # pm2  usage
 npm install pm2@latest -g
 pm2 start npm --name $app-name -- run start
