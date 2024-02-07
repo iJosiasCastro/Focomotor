@@ -50,7 +50,7 @@ class MailController extends Controller
         ]);
 
         $planToLink = [
-            'x4 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084820f25c40182121c00a600f2',
+            'x5 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848d698da5018d80f5bbdb1115',
             'x10 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084820f25c40182121b8bb000f1',
             'x20 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808479cfe0100179fca709f724a3',
             'x50 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808479cfdfe50179fca8447e24e1',
