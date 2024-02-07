@@ -38,7 +38,8 @@
         'Singla Electricidad',
         'Electrauto repuestos Olavarria',
         'Tavernini Servicio y Reparacion de cajas automaticas Olavarria',
-        'Claudio Trezza Seguros Olavarria'
+        'Magford Repuestos Ford Olavarria',
+        'El Taller De Chapa Olavarria'
       ]" />
 
       <div class="h-10 lg:h-16"></div>
@@ -50,23 +51,15 @@
 
       
 
-      <div class="max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-16">
-        <PartialsAds class="w-full"
-          :ads="[
-            'Magford Repuestos Ford Olavarria',
-            'Total Autopartes Olavarria',
-            'Bloquera Falasco Olavarria',
-            'Parini fotocopiadoras Olavarria'
-          ]" />
-        
-        <PartialsAds class="w-full"
-          :ads="[
-            'El Taller De Chapa Olavarria',
-            'Givier Libreria Olavarria',
-            'Mosaicos David Olavarria',
-            'Don Raul Verduleria Olavarria'
-          ]" />
-      </div>
+      <PartialsAds class="w-full"
+        :ads="[
+          'Total Autopartes Olavarria',
+          'Bloquera Falasco Olavarria',
+          'Parini fotocopiadoras Olavarria',
+          'Mosaicos David Olavarria',
+          'Don Raul Verduleria Olavarria'
+      ]" />
+      
 
 
     </section>
