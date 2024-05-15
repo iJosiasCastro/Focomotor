@@ -10,7 +10,7 @@
             <p class="font-normal max-w-xs text-xl">Publicá en Focomotor tu vehículo <b>gratis</b>, <b>rápido </b>y <b>simple</b>.</p>
             <div class="mt-6 text-lg">
                 <NuxtLink :to="{name: 'vehicle.create'}" class="bg-primary duration-500 hover:opacity-75 opacity-100 px-5 py-2 rounded-lg text-white transition-opacity">
-                    Publicar 1 gratis
+                    Publicar gratis
                 </NuxtLink> 
             </div>
         </div>
