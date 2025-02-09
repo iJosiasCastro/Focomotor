@@ -50,7 +50,7 @@
 
       
 
-      <div class="max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-16">
+      <!-- <div class="max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-16">
         <PartialsAds class="w-full"
           :ads="[
             'Magford Repuestos Ford Olavarria',
@@ -66,7 +66,7 @@
             'Mosaicos David Olavarria',
             'Don Raul Verduleria Olavarria'
           ]" />
-      </div>
+      </div> -->
 
 
     </section>

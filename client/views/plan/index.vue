@@ -6,7 +6,7 @@
         <div class="h-5 md:h-8"></div>
         <div class="max-w-3xl mx-auto">
             <p class="font-normal text-center">
-                Nuestros planes se adaptan a tu necesidad para que puedas publicar en
+                Nuestros planes se adaptan a tus unidades para que puedas publicar en
                 Focomotor con un precio amigable. ¡Impulsá tus ventas de vehículos
                 ahora!
             </p>
@@ -58,11 +58,9 @@ export default {
   data(){
     return {
         plans: [
-            // {name: 'x4 Publicaciones', class: 'md:col-span-4', price: '2.000', vehicles: 4},
-            // {name: 'x10 Publicaciones', class: 'md:col-span-4', price: '4.000', vehicles: 10},
-            {name: 'x20 Publicaciones', class: 'md:col-span-4', price: '9.000', vehicles: 20},
-            {name: 'x50 Publicaciones', class: 'md:col-span-4', price: '15.000', vehicles: 50},
-            {name: 'x100 Publicaciones', class: 'md:col-span-4', price: '25.000', vehicles: 100},
+            {name: 'x10 Publicaciones', class: 'md:col-span-4', price: '15.000', vehicles: 10},
+            {name: 'x50 Publicaciones', class: 'md:col-span-4', price: '30.000', vehicles: 50},
+            {name: 'x120 Publicaciones', class: 'md:col-span-4', price: '50.000', vehicles: 120},
         ]
     }
   }

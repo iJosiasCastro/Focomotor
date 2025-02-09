@@ -156,7 +156,7 @@
 
 
         <div class="h-24"></div>
-        <h1 class="font-normal text-2xl">Te puede interesar:</h1>
+        <h1 class="font-normal text-2xl">Últimas publicaciones:</h1>
         <div class="gap-2 grid grid-cols-2 mt-3 md:gap-4 md:grid-cols-3">
             <VehicleCard
                 v-for="vehicle in data.related"

@@ -50,11 +50,9 @@ class MailController extends Controller
         ]);
 
         $planToLink = [
-            'x4 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084820f25c40182121c00a600f2',
-            'x10 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084820f25c40182121b8bb000f1',
-            'x20 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808479cfe0100179fca709f724a3',
-            'x50 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808479cfdfe50179fca8447e24e1',
-            'x100 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847b629336017bbc8021c346d6'
+            'x10 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084930506df019307fbfed100fd',
+            'x50 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808492eb461b019307fc901c0b15 ',
+            'x120 Publicaciones' => 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808492eb461b019307fc55a70b14'
         ];
         
         if (isset($planToLink[$request['plan']])) {

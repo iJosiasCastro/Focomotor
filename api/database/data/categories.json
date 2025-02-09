@@ -405,6 +405,9 @@
                     },
                     {
                         "name": "Zafira"
+                    },
+                    {
+                        "name": "Classic"
                     }
                 ]
             },
@@ -778,6 +781,9 @@
                     },
                     {
                         "name": "Vivace"
+                    },
+                    {
+                        "name": "Fastback"
                     }
                 ]
             },
@@ -885,6 +891,9 @@
                     },
                     {
                         "name": "Windstar"
+                    },
+                    {
+                        "name": "Territorry"
                     }
                 ]
             },
@@ -1084,12 +1093,7 @@
                 "models": [
                     {
                         "name": "Amigo"
-                    }
-                ]
-            },
-            {
-                "name": "Isuzu",
-                "models": [
+                    },
                     {
                         "name": "Pick-Up"
                     },
@@ -1792,6 +1796,12 @@
                     },
                     {
                         "name": "Twingo"
+                    },
+                    {
+                        "name": "Alaskan"
+                    },
+                    {
+                        "name": "Kardian"
                     }
                 ]
             },
@@ -2130,6 +2140,9 @@
                     },
                     {
                         "name": "Voyage"
+                    },
+                    {
+                        "name": "Taos"
                     }
                 ]
             },
@@ -2421,6 +2434,9 @@
                     },
                     {
                         "name": "Zontes 310"
+                    },
+                    {
+                        "name": "Zontes 350"
                     }
                 ]
             },
@@ -3069,7 +3085,7 @@
                         "name": "Fe 501"
                     },
                     {
-                        "name": "Suartpilen 401"
+                        "name": "Svartpilen 401"
                     },
                     {
                         "name": "Tc 50"
@@ -4199,6 +4215,17 @@
                     },
                     {
                         "name": "1000"
+                    }
+                ]
+            },
+            {
+                "name": "DFM",
+                "models": [
+                    {
+                        "name": "Diolica"
+                    },
+                    {
+                        "name": "T01"
                     }
                 ]
             },
