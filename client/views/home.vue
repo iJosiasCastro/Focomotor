@@ -32,14 +32,14 @@
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
 
-      <div class="h-10 lg:h-16"></div>
+      <!-- <div class="h-10 lg:h-16"></div>
 
       <PartialsAds :ads="[
         'Singla Electricidad',
         'Electrauto repuestos Olavarria',
         'Tavernini Servicio y Reparacion de cajas automaticas Olavarria',
         'Claudio Trezza Seguros Olavarria'
-      ]" />
+      ]" /> -->
 
       <div class="h-10 lg:h-16"></div>
       
@@ -118,6 +118,7 @@ export default {
         $axios.$get('vehicles/home').then(r => vehicles=r),
     ])
 
+    console.log(data)
     return {vehicles, data}
   },
 }
