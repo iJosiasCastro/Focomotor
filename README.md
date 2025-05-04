@@ -1,31 +1,40 @@
-# Focomotor
 
-## Cloudpanel
-Url: https://82.29.60.240:8443/login
-User: admin
-Pass: %6f68:t+R6PD0kxuihEf
+# https://168.231.100.143:8443
+user: admin
+pass: 4orBkM0yPhXHgnc%7iE#
+name: srv814722.hstgr.cloud
 
-## SSH
-User: root
-Pass: n/1Skt&ie8xbA/CoB2u+
 
-## Focomotor
-User: focomotor
-Pass: OtAJXxMc4OiA1821kFOp
+# api:
+focomotor-api
+UKkQfYe9ah5OqnP8Xrax
 
-## Focomotor SSH
-User: focomotor2-ssh
-Pass: 6ho2ZfIgtwWqRlly4BPa
-
-## Focomotor API
-User: focomotor-api-ssh
-Pass: 2Z3I5jMVAUZj3lYe8C6d
-
-## Focomotor API SSH
-User: admin
-Pass: ugVWpB2hvpXvgAtrBzw1
-
+# db
 database
+admin
+auepy1JFbzBcKptqjINr
+
+# node
 focomotor
-root
-L3go3DhkwzB70gbgY2n3
+iYMZnEio02qsji15rSgD
+
+# ssh
+admin
+jCfvQB5kDbRI7WPHlKO3
+
+# hostinger
+ssh root@168.231.100.143
+.8.N5nfM@TOtR6bvr'H1
+
+
+pLjDcp8qgYAqGT77esL3
+
+
+## ssh node
+focomotor-2
+jP5OpiiVQ9buTK3E8Dyi
+
+
+## focomotor-api
+focomotor-api
+YwUbRZCg0m3O7nBwDl5M

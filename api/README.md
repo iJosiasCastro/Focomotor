@@ -54,3 +54,16 @@ curl https://api.focomotor.com.ar/api/delete-exipired-vehicles
 
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+mklink /D ".\public\storage" ".\storage\app\public"
+mklink /D ".\public\storage" ".\storage\app\public"
+ln -s ./storage/app/public ./public/storage
+
+# Storage link
+php artisan storage:link
+public/storage → storage/app/public
+mkdir -p storage/app/public
+chmod -R 775 storage
+chown -R www-data:www-data storage bootstrap/cache
+rm public/storage  # Remove broken link
+php artisan storage:link
